@@ -1,0 +1,549 @@
+"Use the up, down, leff, and right arrows to navigate the worksheet"
+Effective Sales and Use Tax Rates
+Location,Rate,County,Type,Notes
+Adelanto,7.7499999999999999E-2,San Bernardino,City
+Agoura Hills,9.7500000000000003E-2,Los Angeles,City
+Alameda,0.1075,Alameda,City
+Alameda County,0.10249999999999999,Alameda,County
+Albany,0.1075,Alameda,City
+Alhambra,0.105,Los Angeles,City
+Aliso Viejo,7.7499999999999999E-2,Orange,City
+Alpine County,7.2499999999999995E-2,Alpine,County
+Alturas,7.2499999999999995E-2,Modoc,City
+Amador City,0.08,Amador,City
+Amador County,7.7499999999999999E-2,Amador,County
+American Canyon,7.7499999999999999E-2,Napa,City
+Anaheim,7.7499999999999999E-2,Orange,City
+Anderson,7.7499999999999999E-2,Shasta,City
+Angels Camp,8.7499999999999994E-2,Calaveras,City
+Antioch,9.7500000000000003E-2,Contra Costa,City
+Apple Valley,8.7499999999999994E-2,San Bernardino,City
+Arcadia,0.105,Los Angeles,City
+Arcata,0.10249999999999999,Humboldt,City
+Arroyo Grande,8.7499999999999994E-2,San Luis Obispo,City
+Artesia,0.105,Los Angeles,City
+Arvin,8.2500000000000004E-2,Kern,City
+Atascadero,8.7499999999999994E-2,San Luis Obispo,City
+Atherton,9.375E-2,San Mateo,City
+Atwater,8.7499999999999994E-2,Merced,City
+Auburn,7.2499999999999995E-2,Placer,City
+Avalon,0.10249999999999999,Los Angeles,City
+Avenal,8.2500000000000004E-2,Kings,City
+Azusa,0.1075,Los Angeles,City
+Bakersfield,8.2500000000000004E-2,Kern,City
+Baldwin Park,0.105,Los Angeles,City
+Banning,7.7499999999999999E-2,Riverside,City
+Barstow,8.7499999999999994E-2,San Bernardino,City
+Beaumont,7.7499999999999999E-2,Riverside,City
+Bell,9.7500000000000003E-2,Los Angeles,City
+Bellflower,0.105,Los Angeles,City
+Bell Gardens,0.105,Los Angeles,City
+Belmont,9.8750000000000004E-2,San Mateo,City
+Belvedere,8.2500000000000004E-2,Marin,City
+Benicia,9.6250000000000002E-2,Solano,City
+Berkeley,0.10249999999999999,Alameda,City
+Beverly Hills,9.7500000000000003E-2,Los Angeles,City
+Big Bear Lake,7.7499999999999999E-2,San Bernardino,City
+Biggs,8.2500000000000004E-2,Butte,City
+Bishop,8.7499999999999994E-2,Inyo,City
+Blue Lake,9.7500000000000003E-2,Humboldt,City
+Blythe,8.7499999999999994E-2,Riverside,City
+Bradbury,9.7500000000000003E-2,Los Angeles,City
+Brawley,8.7499999999999994E-2,Imperial,City
+Brea,7.7499999999999999E-2,Orange,City
+Brentwood,8.7499999999999994E-2,Contra Costa,City
+Brisbane,9.8750000000000004E-2,San Mateo,City
+Buellton,7.7499999999999999E-2,Santa Barbara,City
+Buena Park,8.7499999999999994E-2,Orange,City
+Burbank,0.105,Los Angeles,City
+Burlingame,9.6250000000000002E-2,San Mateo,City
+Butte County,8.2500000000000004E-2,Butte,County
+Calabasas,9.7500000000000003E-2,Los Angeles,City
+Calaveras County,8.2500000000000004E-2,Calaveras,County
+Calexico,8.2500000000000004E-2,Imperial,City
+California City,8.2500000000000004E-2,Kern,City
+Calimesa,7.7499999999999999E-2,Riverside,City
+Calipatria,7.7499999999999999E-2,Imperial,City
+Calistoga,7.7499999999999999E-2,Napa,City
+Camarillo,7.2499999999999995E-2,Ventura,City
+Campbell,9.8750000000000004E-2,Santa Clara,City
+Canyon Lake,7.7499999999999999E-2,Riverside,City
+Capitola,9.2499999999999999E-2,Santa Cruz,City
+Carlsbad,7.7499999999999999E-2,San Diego,City
+Carmel-by-the-Sea,9.2499999999999999E-2,Monterey,City
+Carpinteria,0.09,Santa Barbara,City
+Carson,0.105,Los Angeles,City
+Cathedral City,9.2499999999999999E-2,Riverside,City
+Ceres,8.3750000000000005E-2,Stanislaus,City
+Cerritos,9.7500000000000003E-2,Los Angeles,City
+Chico,9.2499999999999999E-2,Butte,City
+Chino,8.7499999999999994E-2,San Bernardino,City
+Chino Hills,7.7499999999999999E-2,San Bernardino,City
+Chowchilla,8.7499999999999994E-2,Madera,City
+Chula Vista,8.7499999999999994E-2,San Diego,City
+Citrus Heights,7.7499999999999999E-2,Sacramento,City
+City of Commerce,0.105,Los Angeles,City
+City of Industry,9.7500000000000003E-2,Los Angeles,City
+Claremont,9.7500000000000003E-2,Los Angeles,City
+Clayton,8.7499999999999994E-2,Contra Costa,City
+Clearlake,8.7499999999999994E-2,Lake,City
+Cloverdale,0.1,Sonoma,City
+Clovis,8.9749999999999996E-2,Fresno,City
+Coachella,8.7499999999999994E-2,Riverside,City
+Coalinga,8.9749999999999996E-2,Fresno,City
+Colfax,7.2499999999999995E-2,Placer,City
+Colma,9.8750000000000004E-2,San Mateo,City
+Colton,8.7499999999999994E-2,San Bernardino,City
+Colusa,8.7499999999999994E-2,Colusa,City
+Colusa County,7.7499999999999999E-2,Colusa,County
+Compton,0.1075,Los Angeles,City
+Concord,9.7500000000000003E-2,Contra Costa,City
+Contra Costa County,8.7499999999999994E-2,Contra Costa,County
+Corcoran,8.2500000000000004E-2,Kings,City
+Corning,7.7499999999999999E-2,Tehama,City
+Corona,8.7499999999999994E-2,Riverside,City
+Coronado,7.7499999999999999E-2,San Diego,City
+Corte Madera,0.09,Marin,City
+Costa Mesa,7.7499999999999999E-2,Orange,City
+Cotati,0.10249999999999999,Sonoma,City
+Covina,0.105,Los Angeles,City
+Crescent City,8.2500000000000004E-2,Del Norte,City
+Cudahy,0.105,Los Angeles,City
+Culver City,0.1075,Los Angeles,City
+Cupertino,9.1249999999999998E-2,Santa Clara,City
+Cypress,7.7499999999999999E-2,Orange,City
+Daly City,9.8750000000000004E-2,San Mateo,City
+Dana Point,7.7499999999999999E-2,Orange,City
+Danville,8.7499999999999994E-2,Contra Costa,City
+Davis,9.2499999999999999E-2,Yolo,City
+Delano,8.2500000000000004E-2,Kern,City
+Del Mar,8.7499999999999994E-2,San Diego,City
+Del Norte County,Del Norte,County,Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Del Norte County.
+Del Norte County Unincorporated Area,8.2500000000000004E-2,Del Norte,County,This tax rate applies only to unincorporated areas of Del Norte County. Please refer to the applicable incorporated city within the county for that city's tax rate.
+Del Rey Oaks,9.2499999999999999E-2,Monterey,City
+Desert Hot Springs,8.7499999999999994E-2,Riverside,City
+Diamond Bar,9.7500000000000003E-2,Los Angeles,City
+Dinuba,8.5000000000000006E-2,Tulare,City
+Dixon,8.3750000000000005E-2,Solano,City
+Dorris,7.2499999999999995E-2,Siskiyou,City
+Dos Palos,8.2500000000000004E-2,Merced,City
+Downey,0.105,Los Angeles,City
+Duarte,0.105,Los Angeles,City
+Dublin,0.10249999999999999,Alameda,City
+Dunsmuir,7.7499999999999999E-2,Siskiyou,City
+East Palo Alto,9.8750000000000004E-2,San Mateo,City
+Eastvale,7.7499999999999999E-2,Riverside,City
+El Cajon,8.2500000000000004E-2,San Diego,City
+El Centro,8.2500000000000004E-2,Imperial,City
+El Cerrito,0.10249999999999999,Contra Costa,City
+El Dorado County,7.2499999999999995E-2,El Dorado,County
+Elk Grove,8.7499999999999994E-2,Sacramento,City
+El Monte,0.105,Los Angeles,City
+El Segundo,9.7500000000000003E-2,Los Angeles,City
+Emeryville,0.105,Alameda,City
+Encinitas,7.7499999999999999E-2,San Diego,City
+Escalon,8.7499999999999994E-2,San Joaquin,City
+Escondido,8.7499999999999994E-2,San Diego,City
+Etna,7.2499999999999995E-2,Siskiyou,City
+Eureka,0.10249999999999999,Humboldt,City
+Exeter,8.7499999999999994E-2,Tulare,City
+Fairfax,0.09,Marin,City
+Fairfield,8.3750000000000005E-2,Solano,City
+Farmersville,8.7499999999999994E-2,Tulare,City
+Ferndale,9.5000000000000001E-2,Humboldt,City
+Fillmore,7.2499999999999995E-2,Ventura,City
+Firebaugh,7.9750000000000001E-2,Fresno,City
+Folsom,7.7499999999999999E-2,Sacramento,City
+Fontana,8.7499999999999994E-2,San Bernardino,City
+Fort Bragg,9.2499999999999999E-2,Mendocino,City
+Fort Jones,7.2499999999999995E-2,Siskiyou,City
+Fortuna,9.5000000000000001E-2,Humboldt,City
+Foster City,9.375E-2,San Mateo,City
+Fountain Valley,8.7499999999999994E-2,Orange,City
+Fowler,8.9749999999999996E-2,Fresno,City
+Fremont,0.10249999999999999,Alameda,City
+Fresno,8.3500000000000005E-2,Fresno,City
+Fresno County,7.9750000000000001E-2,Fresno,County
+Fullerton,7.7499999999999999E-2,Orange,City
+Galt,9.2499999999999999E-2,Sacramento,City
+Gardena,0.105,Los Angeles,City
+Garden Grove,8.7499999999999994E-2,Orange,City
+Gilroy,9.1249999999999998E-2,Santa Clara,City
+Glendale,0.105,Los Angeles,City
+Glendora,0.1075,Los Angeles,City
+Glenn County,7.2499999999999995E-2,Glenn,County
+Goleta,8.7499999999999994E-2,Santa Barbara,City
+Gonzales,8.7499999999999994E-2,Monterey,City
+Grand Terrace,7.7499999999999999E-2,San Bernardino,City
+Grass Valley,8.8749999999999996E-2,Nevada,City
+Greenfield,9.5000000000000001E-2,Monterey,City
+Gridley,8.2500000000000004E-2,Butte,City
+Grover Beach,8.7499999999999994E-2,San Luis Obispo,City
+Guadalupe,8.7499999999999994E-2,Santa Barbara,City
+Gustine,8.2500000000000004E-2,Merced,City
+Half Moon Bay,9.8750000000000004E-2,San Mateo,City
+Hanford,8.2500000000000004E-2,Kings,City
+Hawaiian Gardens,0.105,Los Angeles,City
+Hawthorne,0.105,Los Angeles,City
+Hayward,0.1075,Alameda,City
+Healdsburg,9.7500000000000003E-2,Sonoma,City
+Hemet,8.7499999999999994E-2,Riverside,City
+Hercules,9.2499999999999999E-2,Contra Costa,City
+Hermosa Beach,9.7500000000000003E-2,Los Angeles,City
+Hesperia,7.7499999999999999E-2,San Bernardino,City
+Hidden Hills,9.7500000000000003E-2,Los Angeles,City
+Highland,7.7499999999999999E-2,San Bernardino,City
+Hillsborough,9.375E-2,San Mateo,City
+Hollister,9.2499999999999999E-2,San Benito,City
+Holtville,7.7499999999999999E-2,Imperial,City
+Hughson,7.8750000000000001E-2,Stanislaus,City
+Humboldt County,8.7499999999999994E-2,Humboldt,County
+Huntington Beach,7.7499999999999999E-2,Orange,City
+Huntington Park,0.105,Los Angeles,City
+Huron,8.9749999999999996E-2,Fresno,City
+Imperial,7.7499999999999999E-2,Imperial,City
+Imperial Beach,8.7499999999999994E-2,San Diego,City
+Imperial County,7.7499999999999999E-2,Imperial,County
+Indian Wells,7.7499999999999999E-2,Riverside,City
+Indio,8.7499999999999994E-2,Riverside,City
+Inglewood,0.10249999999999999,Los Angeles,City
+Inyo County,7.7499999999999999E-2,Inyo,County
+Ione,7.7499999999999999E-2,Amador,City
+Irvine,7.7499999999999999E-2,Orange,City
+Irwindale,0.1075,Los Angeles,City
+Isleton,8.7499999999999994E-2,Sacramento,City
+Jackson,7.7499999999999999E-2,Amador,City
+Jurupa Valley,7.7499999999999999E-2,Riverside,City
+Kerman,8.9749999999999996E-2,Fresno,City
+Kern County,Kern,County,Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Kern County.
+Kern County Unincorporated Area,8.2500000000000004E-2,Kern,County,This tax rate applies only to unincorporated areas of Kern County. Please refer to the applicable incorporated city within the county for that city's tax rate.
+King City,8.7499999999999994E-2,Monterey,City
+Kingsburg,8.9749999999999996E-2,Fresno,City
+Kings County,7.2499999999999995E-2,Kings,County
+La Cañada Flintridge,0.105,Los Angeles,City
+Lafayette,9.2499999999999999E-2,Contra Costa,City
+Laguna Beach,7.7499999999999999E-2,Orange,City
+Laguna Hills,7.7499999999999999E-2,Orange,City
+Laguna Niguel,7.7499999999999999E-2,Orange,City
+Laguna Woods,7.7499999999999999E-2,Orange,City
+La Habra,8.7499999999999994E-2,Orange,City
+La Habra Heights,9.7500000000000003E-2,Los Angeles,City
+Lake County,7.2499999999999995E-2,Lake,County
+Lake Elsinore,8.7499999999999994E-2,Riverside,City
+Lake Forest,7.7499999999999999E-2,Orange,City
+Lakeport,8.7499999999999994E-2,Lake,City
+Lakewood,0.105,Los Angeles,City
+La Mesa,8.5000000000000006E-2,San Diego,City
+La Mirada,9.7500000000000003E-2,Los Angeles,City
+Lancaster,0.1125,Los Angeles,City
+La Palma,8.7499999999999994E-2,Orange,City
+La Puente,0.10249999999999999,Los Angeles,City
+La Quinta,8.7499999999999994E-2,Riverside,City
+Larkspur,9.2499999999999999E-2,Marin,City
+Lassen County,7.2499999999999995E-2,Lassen,County
+Lathrop,8.7499999999999994E-2,San Joaquin,City
+La Verne,0.105,Los Angeles,City
+Lawndale,0.105,Los Angeles,City
+Lemon Grove,8.7499999999999994E-2,San Diego,City
+Lemoore,8.2500000000000004E-2,Kings,City
+Lincoln,7.2499999999999995E-2,Placer,City
+Lindsay,8.7499999999999994E-2,Tulare,City
+Live Oak,7.2499999999999995E-2,Sutter,City
+Livermore,0.10249999999999999,Alameda,City
+Livingston,8.7499999999999994E-2,Merced,City
+Lodi,8.2500000000000004E-2,San Joaquin,City
+Loma Linda,7.7499999999999999E-2,San Bernardino,City
+Lomita,0.105,Los Angeles,City
+Lompoc,8.7499999999999994E-2,Santa Barbara,City
+Long Beach,0.105,Los Angeles,City
+Loomis,7.4999999999999997E-2,Placer,City
+Los Alamitos,9.2499999999999999E-2,Orange,City
+Los Altos,9.1249999999999998E-2,Santa Clara,City
+Los Altos Hills,9.1249999999999998E-2,Santa Clara,City
+Los Angeles,9.7500000000000003E-2,Los Angeles,City
+Los Angeles County,9.7500000000000003E-2,Los Angeles,County
+Los Banos,8.7499999999999994E-2,Merced,City
+Los Gatos,9.2499999999999999E-2,Santa Clara,City
+Loyalton,7.2499999999999995E-2,Sierra,City
+Lynwood,0.1075,Los Angeles,City
+Madera,8.2500000000000004E-2,Madera,City
+Madera County,7.7499999999999999E-2,Madera,County
+Malibu,0.10249999999999999,Los Angeles,City
+Mammoth Lakes,7.7499999999999999E-2,Mono,City
+Manhattan Beach,0.10249999999999999,Los Angeles,City
+Manteca,0.09,San Joaquin,City
+Maricopa,8.2500000000000004E-2,Kern,City
+Marina,9.2499999999999999E-2,Monterey,City
+Marin County,8.2500000000000004E-2,Marin,County
+Mariposa County,8.2500000000000004E-2,Mariposa,County
+Martinez,9.7500000000000003E-2,Contra Costa,City
+Marysville,8.2500000000000004E-2,Yuba,City
+Maywood,9.7500000000000003E-2,Los Angeles,City
+McFarland,8.2500000000000004E-2,Kern,City
+Mendocino County,7.8750000000000001E-2,Mendocino,County
+Mendota,9.2249999999999999E-2,Fresno,City
+Menifee,8.7499999999999994E-2,Riverside,City
+Menlo Park,9.375E-2,San Mateo,City
+Merced,8.2500000000000004E-2,Merced,City
+Merced County,7.7499999999999999E-2,Merced,County
+Millbrae,9.375E-2,San Mateo,City
+Mill Valley,9.2499999999999999E-2,Marin,City
+Milpitas,9.375E-2,Santa Clara,City
+Mission Viejo,7.7499999999999999E-2,Orange,City
+Modesto,8.8749999999999996E-2,Stanislaus,City
+Modoc County,7.2499999999999995E-2,Modoc,County
+Mono County,7.2499999999999995E-2,Mono,County
+Monrovia,0.105,Los Angeles,City
+Montague,7.2499999999999995E-2,Siskiyou,City
+Montclair,0.09,San Bernardino,City
+Montebello,0.105,Los Angeles,City
+Monterey,9.2499999999999999E-2,Monterey,City
+Monterey County,Monterey,County,Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Monterey County.
+Monterey County Unincorporated Area,8.7499999999999994E-2,Monterey,County,This tax rate applies only to unincorporated areas of Monterey County. Please refer to the applicable incorporated city within the county for that city's tax rate.
+Monterey Park,0.105,Los Angeles,City
+Monte Sereno,9.1249999999999998E-2,Santa Clara,City
+Moorpark,7.2499999999999995E-2,Ventura,City
+Moraga,9.7500000000000003E-2,Contra Costa,City
+Moreno Valley,8.7499999999999994E-2,Riverside,City
+Morgan Hill,9.1249999999999998E-2,Santa Clara,City
+Morro Bay,8.7499999999999994E-2,San Luis Obispo,City
+Mountain House,7.7499999999999999E-2,San Joaquin,City
+Mountain View,9.1249999999999998E-2,Santa Clara,City
+Mount Shasta,7.4999999999999997E-2,Siskiyou,City
+Murrieta,8.7499999999999994E-2,Riverside,City
+Napa,8.7499999999999994E-2,Napa,City
+Napa County,7.7499999999999999E-2,Napa,County
+National City,8.7499999999999994E-2,San Diego,City
+Needles,7.7499999999999999E-2,San Bernardino,City
+Nevada City,8.8749999999999996E-2,Nevada,City
+Nevada County,7.4999999999999997E-2,Nevada,County
+Newark,0.1075,Alameda,City
+Newman,7.8750000000000001E-2,Stanislaus,City
+Newport Beach,7.7499999999999999E-2,Orange,City
+Norco,8.7499999999999994E-2,Riverside,City
+Norwalk,0.105,Los Angeles,City
+Novato,9.2499999999999999E-2,Marin,City
+Oakdale,8.3750000000000005E-2,Stanislaus,City
+Oakland,0.1075,Alameda,City
+Oakley,8.7499999999999994E-2,Contra Costa,City
+Oceanside,8.2500000000000004E-2,San Diego,City
+Ojai,7.2499999999999995E-2,Ventura,City
+Ontario,8.7499999999999994E-2,San Bernardino,City
+Orange,7.7499999999999999E-2,Orange,City
+Orange County,7.7499999999999999E-2,Orange,County
+Orange Cove,7.9750000000000001E-2,Fresno,City
+Orinda,9.7500000000000003E-2,Contra Costa,City
+Orland,8.2500000000000004E-2,Glenn,City
+Oroville,9.2499999999999999E-2,Butte,City
+Oxnard,9.2499999999999999E-2,Ventura,City
+Pacifica,9.8750000000000004E-2,San Mateo,City
+Pacific Grove,9.2499999999999999E-2,Monterey,City
+Palmdale,0.1125,Los Angeles,City
+Palm Desert,8.7499999999999994E-2,Riverside,City
+Palm Springs,9.2499999999999999E-2,Riverside,City
+Palo Alto,9.1249999999999998E-2,Santa Clara,City
+Palos Verdes Estates,9.7500000000000003E-2,Los Angeles,City
+Paradise,8.7499999999999994E-2,Butte,City
+Paramount,0.105,Los Angeles,City
+Parlier,8.9749999999999996E-2,Fresno,City
+Pasadena,0.105,Los Angeles,City
+Paso Robles,8.7499999999999994E-2,San Luis Obispo,City
+Patterson,7.8750000000000001E-2,Stanislaus,City
+Perris,7.7499999999999999E-2,Riverside,City
+Petaluma,0.10249999999999999,Sonoma,City
+Pico Rivera,0.1075,Los Angeles,City
+Piedmont,0.10249999999999999,Alameda,City
+Pinole,0.10249999999999999,Contra Costa,City
+Pismo Beach,8.2500000000000004E-2,San Luis Obispo,City
+Pittsburg,9.2499999999999999E-2,Contra Costa,City
+Placentia,8.7499999999999994E-2,Orange,City
+Placer County,7.2499999999999995E-2,Placer,County
+Placerville,8.2500000000000004E-2,El Dorado,City
+Pleasant Hill,9.2499999999999999E-2,Contra Costa,City
+Pleasanton,0.10249999999999999,Alameda,City
+Plumas County,7.2499999999999995E-2,Plumas,County
+Plymouth,7.7499999999999999E-2,Amador,City
+Point Arena,9.2499999999999999E-2,Mendocino,City
+Pomona,0.105,Los Angeles,City
+Porterville,9.2499999999999999E-2,Tulare,City
+Port Hueneme,8.7499999999999994E-2,Ventura,City
+Portola,7.2499999999999995E-2,Plumas,City
+Portola Valley,9.375E-2,San Mateo,City
+Poway,7.7499999999999999E-2,San Diego,City
+Rancho Cordova,8.7499999999999994E-2,Sacramento,City
+Rancho Cucamonga,7.7499999999999999E-2,San Bernardino,City
+Rancho Mirage,7.7499999999999999E-2,Riverside,City
+Rancho Palos Verdes,9.7500000000000003E-2,Los Angeles,City
+Rancho Santa Margarita,7.7499999999999999E-2,Orange,City
+Red Bluff,7.4999999999999997E-2,Tehama,City
+Redding,7.2499999999999995E-2,Shasta,City
+Redlands,8.7499999999999994E-2,San Bernardino,City
+Redondo Beach,9.7500000000000003E-2,Los Angeles,City
+Redwood City,9.8750000000000004E-2,San Mateo,City
+Reedley,9.2249999999999999E-2,Fresno,City
+Rialto,7.7499999999999999E-2,San Bernardino,City
+Richmond,9.7500000000000003E-2,Contra Costa,City
+Ridgecrest,9.2499999999999999E-2,Kern,City
+Rio Dell,9.5000000000000001E-2,Humboldt,City
+Rio Vista,9.1249999999999998E-2,Solano,City
+Ripon,7.7499999999999999E-2,San Joaquin,City
+Riverbank,7.8750000000000001E-2,Stanislaus,City
+Riverside,8.7499999999999994E-2,Riverside,City
+Riverside County,7.7499999999999999E-2,Riverside,County
+Rocklin,7.2499999999999995E-2,Placer,City
+Rohnert Park,9.7500000000000003E-2,Sonoma,City
+Rolling Hills,9.7500000000000003E-2,Los Angeles,City
+Rolling Hills Estates,9.7500000000000003E-2,Los Angeles,City
+Rosemead,9.7500000000000003E-2,Los Angeles,City
+Roseville,7.7499999999999999E-2,Placer,City
+Ross,8.2500000000000004E-2,Marin,City
+Sacramento,8.7499999999999994E-2,Sacramento,City
+Sacramento County,7.7499999999999999E-2,Sacramento,County
+Salinas,9.2499999999999999E-2,Monterey,City
+San Anselmo,9.2499999999999999E-2,Marin,City
+San Benito County,8.2500000000000004E-2,San Benito,County
+San Bernardino,8.7499999999999994E-2,San Bernardino,City
+San Bernardino County,7.7499999999999999E-2,San Bernardino,County
+San Bruno,9.8750000000000004E-2,San Mateo,City
+San Carlos,9.375E-2,San Mateo,City
+San Clemente,7.7499999999999999E-2,Orange,City
+Sand City,9.2499999999999999E-2,Monterey,City
+San Diego,7.7499999999999999E-2,San Diego,City
+San Diego County,7.7499999999999999E-2,San Diego,County
+San Dimas,9.7500000000000003E-2,Los Angeles,City
+San Fernando,0.105,Los Angeles,City
+San Francisco,8.6249999999999993E-2,San Francisco,City
+San Francisco County,8.6249999999999993E-2,San Francisco,County
+San Gabriel,0.105,Los Angeles,City
+Sanger,8.7249999999999994E-2,Fresno,City
+San Jacinto,8.7499999999999994E-2,Riverside,City
+San Joaquin,7.9750000000000001E-2,Fresno,City
+San Joaquin County,7.7499999999999999E-2,San Joaquin,County
+San Jose,9.375E-2,Santa Clara,City
+San Juan Bautista,0.09,San Benito,City
+San Juan Capistrano,7.7499999999999999E-2,Orange,City
+San Leandro,0.1075,Alameda,City
+San Luis Obispo,8.7499999999999994E-2,San Luis Obispo,City
+San Luis Obispo County,7.2499999999999995E-2,San Luis Obispo,County
+San Marcos,8.7499999999999994E-2,San Diego,City
+San Marino,9.7500000000000003E-2,Los Angeles,City
+San Mateo,9.6250000000000002E-2,San Mateo,City
+San Mateo County,9.375E-2,San Mateo,County
+San Pablo,9.5000000000000001E-2,Contra Costa,City
+San Rafael,9.2499999999999999E-2,Marin,City
+San Ramon,9.7500000000000003E-2,Contra Costa,City
+Santa Ana,9.2499999999999999E-2,Orange,City
+Santa Barbara,9.2499999999999999E-2,Santa Barbara,City
+Santa Barbara County,7.7499999999999999E-2,Santa Barbara,County
+Santa Clara,9.1249999999999998E-2,Santa Clara,City
+Santa Clara County,9.1249999999999998E-2,Santa Clara,County
+Santa Clarita,9.7500000000000003E-2,Los Angeles,City
+Santa Cruz,9.7500000000000003E-2,Santa Cruz,City
+Santa Cruz County,Santa Cruz,County,Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Santa Cruz County.
+Santa Cruz County Unincorporated Area,9.5000000000000001E-2,Santa Cruz,County,This tax rate applies only to unincorporated areas of Santa Cruz County. Please refer to the applicable incorporated city within the county for that city's tax rate.
+Santa Fe Springs,0.1075,Los Angeles,City
+Santa Maria,8.7499999999999994E-2,Santa Barbara,City
+Santa Monica,0.1075,Los Angeles,City
+Santa Paula,9.2499999999999999E-2,Ventura,City
+Santa Rosa,0.1,Sonoma,City
+Santee,7.7499999999999999E-2,San Diego,City
+Saratoga,9.1249999999999998E-2,Santa Clara,City
+Sausalito,9.2499999999999999E-2,Marin,City
+Scotts Valley,9.7500000000000003E-2,Santa Cruz,City
+Seal Beach,9.2499999999999999E-2,Orange,City
+Seaside,9.2499999999999999E-2,Monterey,City
+Sebastopol,0.105,Sonoma,City
+Selma,8.4750000000000006E-2,Fresno,City
+Shafter,7.2499999999999995E-2,Kern,City
+Shasta County,7.2499999999999995E-2,Shasta,County
+Shasta Lake,7.2499999999999995E-2,Shasta,City
+Sierra County,7.2499999999999995E-2,Sierra,County
+Sierra Madre,0.105,Los Angeles,City
+Signal Hill,0.105,Los Angeles,City
+Simi Valley,7.2499999999999995E-2,Ventura,City
+Siskiyou County,7.2499999999999995E-2,Siskiyou,County
+Solana Beach,8.7499999999999994E-2,San Diego,City
+Solano County,7.3749999999999996E-2,Solano,County
+Soledad,9.2499999999999999E-2,Monterey,City
+Solvang,8.7499999999999994E-2,Santa Barbara,City
+Sonoma,0.10249999999999999,Sonoma,City
+Sonoma County,9.2499999999999999E-2,Sonoma,County
+Sonora,8.7499999999999994E-2,Tuolumne,City
+South El Monte,0.1075,Los Angeles,City
+South Gate,0.1075,Los Angeles,City
+South Lake Tahoe,8.7499999999999994E-2,El Dorado,City
+South Pasadena,0.105,Los Angeles,City
+South San Francisco,9.8750000000000004E-2,San Mateo,City
+Stanislaus County,7.8750000000000001E-2,Stanislaus,County
+Stanton,8.7499999999999994E-2,Orange,City
+St. Helena,8.2500000000000004E-2,Napa,City
+Stockton,0.09,San Joaquin,City
+Suisun City,9.1249999999999998E-2,Solano,City
+Sunnyvale,9.1249999999999998E-2,Santa Clara,City
+Susanville,8.2500000000000004E-2,Lassen,City
+Sutter County,7.2499999999999995E-2,Sutter,County
+Sutter Creek,8.7499999999999994E-2,Amador,City
+Taft,8.2500000000000004E-2,Kern,City
+Tehachapi,8.2500000000000004E-2,Kern,City
+Tehama,7.2499999999999995E-2,Tehama,City
+Tehama County,7.2499999999999995E-2,Tehama,County
+Temecula,8.7499999999999994E-2,Riverside,City
+Temple City,9.7500000000000003E-2,Los Angeles,City
+Thousand Oaks,7.2499999999999995E-2,Ventura,City
+Tiburon,8.2500000000000004E-2,Marin,City
+Torrance,0.10249999999999999,Los Angeles,City
+Tracy,8.2500000000000004E-2,San Joaquin,City
+Trinidad,9.5000000000000001E-2,Humboldt,City
+Trinity County,7.2499999999999995E-2,Trinity,County
+Truckee,0.09,Nevada,City
+Tulare,8.2500000000000004E-2,Tulare,City
+Tulare County,7.7499999999999999E-2,Tulare,County
+Tulelake,7.2499999999999995E-2,Siskiyou,City
+Tuolumne County,7.2499999999999995E-2,Tuolumne,County
+Turlock,8.6249999999999993E-2,Stanislaus,City
+Tustin,7.7499999999999999E-2,Orange,City
+Twentynine Palms,7.7499999999999999E-2,San Bernardino,City
+Ukiah,8.8749999999999996E-2,Mendocino,City
+Union City,0.1075,Alameda,City
+Upland,7.7499999999999999E-2,San Bernardino,City
+Vacaville,8.1250000000000003E-2,Solano,City
+Vallejo,9.2499999999999999E-2,Solano,City
+Ventura,7.7499999999999999E-2,Ventura,City
+Ventura County,7.2499999999999995E-2,Ventura,County
+Vernon,0.105,Los Angeles,City
+Victorville,8.7499999999999994E-2,San Bernardino,City
+Villa Park,7.7499999999999999E-2,Orange,City
+Visalia,8.5000000000000006E-2,Tulare,City
+Vista,8.2500000000000004E-2,San Diego,City
+Walnut,9.7500000000000003E-2,Los Angeles,City
+Walnut Creek,9.2499999999999999E-2,Contra Costa,City
+Wasco,8.2500000000000004E-2,Kern,City
+Waterford,7.8750000000000001E-2,Stanislaus,City
+Watsonville,9.7500000000000003E-2,Santa Cruz,City
+Weed,7.4999999999999997E-2,Siskiyou,City
+West Covina,9.7500000000000003E-2,Los Angeles,City
+West Hollywood,0.105,Los Angeles,City
+Westlake Village,9.7500000000000003E-2,Los Angeles,City
+Westminster,9.2499999999999999E-2,Orange,City
+Westmorland,7.7499999999999999E-2,Imperial,City
+West Sacramento,9.2499999999999999E-2,Yolo,City
+Wheatland,7.7499999999999999E-2,Yuba,City
+Whittier,0.105,Los Angeles,City
+Wildomar,8.7499999999999994E-2,Riverside,City
+Williams,8.2500000000000004E-2,Colusa,City
+Willits,9.1249999999999998E-2,Mendocino,City
+Willows,8.7499999999999994E-2,Glenn,City
+Windsor,9.2499999999999999E-2,Sonoma,City
+Winters,8.2500000000000004E-2,Yolo,City
+Woodlake,8.7499999999999994E-2,Tulare,City
+Woodland,0.08,Yolo,City
+Woodside,9.375E-2,San Mateo,City
+Yolo County,7.2499999999999995E-2,Yolo,County
+Yorba Linda,7.7499999999999999E-2,Orange,City
+Yountville,7.7499999999999999E-2,Napa,City
+Yreka,8.7499999999999994E-2,Siskiyou,City
+Yuba City,7.2499999999999995E-2,Sutter,City
+Yuba County,Yuba,County,Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Yuba County.
+Yuba County Unincorporated Area,8.2500000000000004E-2,Yuba,County,This tax rate applies only to unincorporated areas of Yuba County. Please refer to the applicable incorporated city within the county for that city's tax rate.
+Yucaipa,8.7499999999999994E-2,San Bernardino,City
+Yucca Valley,8.7499999999999994E-2,San Bernardino,City

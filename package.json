@@ -1,0 +1,42 @@
+{
+  "name": "taxrates-us",
+  "version": "0.1.0",
+  "description": "Accurate US sales tax rate lookups - starting with California",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/**/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "tax",
+    "sales-tax",
+    "california",
+    "tax-rates",
+    "cdtfa",
+    "taxation"
+  ],
+  "author": "mrpartner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpartnerai/taxrates-us.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrpartnerai/taxrates-us/issues"
+  },
+  "homepage": "https://github.com/mrpartnerai/taxrates-us#readme",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

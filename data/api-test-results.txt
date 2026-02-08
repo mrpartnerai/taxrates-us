@@ -1,0 +1,89 @@
+CDTFA API Test Results
+======================
+
+Test 1: Single jurisdiction (Sacramento)
+curl "https://services.maps.cdtfa.ca.gov/api/taxrate/GetRateByAddress?address=450+N+St&city=Sacramento&zip=95814"
+{
+  "taxRateInfo": [
+    {
+      "rate": 0.0875,
+      "jurisdiction": "SACRAMENTO",
+      "city": "SACRAMENTO",
+      "county": "SACRAMENTO",
+      "tac": "340607050000"
+    }
+  ],
+  "geocodeInfo": {
+    "matchCodes": [
+      "Good"
+    ],
+    "formattedAddress": "450 N St, Sacramento, CA 95814",
+    "confidence": "High",
+    "calcMethod": "Rooftop",
+    "bufferDistance": 50
+  },
+  "termsOfUse": "https://www.cdtfa.ca.gov/dataportal/policy.htm",
+  "disclaimer": "https://www.cdtfa.ca.gov/dataportal/disclaimer.htm"
+}
+
+
+Test 2: Boundary case (Los Angeles)
+{
+  "taxRateInfo": [
+    {
+      "rate": 0.0975,
+      "jurisdiction": "LOS ANGELES",
+      "city": "LOS ANGELES",
+      "county": "LOS ANGELES",
+      "tac": "19050B470000"
+    },
+    {
+      "rate": 0.105,
+      "jurisdiction": "VERNON",
+      "city": "VERNON",
+      "county": "LOS ANGELES",
+      "tac": "19039C150000"
+    }
+  ],
+  "geocodeInfo": {
+    "matchCodes": [
+      "Good"
+    ],
+    "formattedAddress": "2444 S Alameda St, Central City East, CA 90058",
+    "confidence": "High",
+    "calcMethod": "Rooftop",
+    "bufferDistance": 50
+  },
+  "termsOfUse": "https://www.cdtfa.ca.gov/dataportal/policy.htm",
+  "disclaimer": "https://www.cdtfa.ca.gov/dataportal/disclaimer.htm"
+}
+
+
+Test 3: High tax rate (Lancaster)
+{
+  "errors": [
+    {
+      "field": "NA",
+      "message": "The address could not be geocoded."
+    }
+  ]
+}
+
+
+Test 4: Low tax rate (Alpine County)
+{
+  "taxRateInfo": [
+    {
+      "rate": 0.0725,
+      "jurisdiction": "UNINCORPORATED AREA-ALPINE",
+      "city": "UNINCORPORATED",
+      "county": "ALPINE",
+      "tac": "029980000000"
+    }
+  ],
+  "geocodeInfo": {
+    "bufferDistance": 50
+  },
+  "termsOfUse": "https://www.cdtfa.ca.gov/dataportal/policy.htm",
+  "disclaimer": "https://www.cdtfa.ca.gov/dataportal/disclaimer.htm"
+}
