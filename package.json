@@ -1,7 +1,7 @@
 {
   "name": "taxrates-us",
-  "version": "0.1.0",
-  "description": "Accurate US sales tax rate lookups - starting with California",
+  "version": "0.2.0",
+  "description": "Accurate US sales tax rate lookups - CA, TX, NY, FL, WA, NV, OR",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -34,6 +34,7 @@
   ],
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@vercel/node": "^3.0.0",
     "typescript": "^5.6.0"
   },
   "engines": {

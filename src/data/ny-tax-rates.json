@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "New York State Department of Taxation and Finance",
+    "lastUpdated": "2026-02-08",
+    "jurisdictionCount": 1,
+    "version": "0.2.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "New York",
+      "type": "State",
+      "county": "State",
+      "rate": 0.04,
+      "ratePercent": "4.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add additional tax (NYC: 8.875% total)."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "new york": {
+        "location": "New York",
+        "type": "State",
+        "county": "State",
+        "rate": 0.04,
+        "ratePercent": "4.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add additional tax (NYC: 8.875% total)."
+      }
+    }
+  }
+}

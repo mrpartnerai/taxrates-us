@@ -219,7 +219,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -345,7 +345,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -363,7 +363,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.09625,
-      "ratePercent": "9.63%",
+      "ratePercent": "9.625%",
       "districtTax": 0.0238,
       "notes": null
     },
@@ -471,7 +471,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -507,7 +507,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09625,
-      "ratePercent": "9.63%",
+      "ratePercent": "9.625%",
       "districtTax": 0.0238,
       "notes": null
     },
@@ -597,7 +597,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -669,7 +669,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.08375,
-      "ratePercent": "8.38%",
+      "ratePercent": "8.375%",
       "districtTax": 0.0113,
       "notes": null
     },
@@ -795,7 +795,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -813,7 +813,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -831,7 +831,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -993,7 +993,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -1011,7 +1011,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -1062,16 +1062,16 @@
     },
     {
       "location": "Del Norte County",
-      "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Del Norte County.",
+      "type": "County",
       "county": "County",
       "rate": 0,
       "ratePercent": "0.00%",
-      "districtTax": -0.0725,
+      "districtTax": 0,
       "notes": null
     },
     {
       "location": "Del Norte County Unincorporated Area",
-      "type": "County",
+      "type": "Unincorporated Area",
       "county": "Del Norte",
       "rate": 0.0825,
       "ratePercent": "8.25%",
@@ -1119,7 +1119,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.08375,
-      "ratePercent": "8.38%",
+      "ratePercent": "8.375%",
       "districtTax": 0.0113,
       "notes": null
     },
@@ -1182,7 +1182,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -1335,7 +1335,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.08375,
-      "ratePercent": "8.38%",
+      "ratePercent": "8.375%",
       "districtTax": 0.0113,
       "notes": null
     },
@@ -1371,7 +1371,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.07975,
-      "ratePercent": "7.98%",
+      "ratePercent": "7.975%",
       "districtTax": 0.0073,
       "notes": null
     },
@@ -1425,7 +1425,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -1443,7 +1443,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -1470,7 +1470,7 @@
       "type": "County",
       "county": "Fresno",
       "rate": 0.07975,
-      "ratePercent": "7.98%",
+      "ratePercent": "7.975%",
       "districtTax": 0.0073,
       "notes": null
     },
@@ -1515,7 +1515,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -1578,7 +1578,7 @@
       "type": "City",
       "county": "Nevada",
       "rate": 0.08875,
-      "ratePercent": "8.88%",
+      "ratePercent": "8.875%",
       "districtTax": 0.0163,
       "notes": null
     },
@@ -1632,7 +1632,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -1740,7 +1740,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -1767,7 +1767,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -1803,7 +1803,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -1929,22 +1929,22 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
     {
       "location": "Kern County",
-      "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Kern County.",
+      "type": "County",
       "county": "County",
       "rate": 0,
       "ratePercent": "0.00%",
-      "districtTax": -0.0725,
+      "districtTax": 0,
       "notes": null
     },
     {
       "location": "Kern County Unincorporated Area",
-      "type": "County",
+      "type": "Unincorporated Area",
       "county": "Kern",
       "rate": 0.0825,
       "ratePercent": "8.25%",
@@ -1965,7 +1965,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -2325,7 +2325,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -2334,7 +2334,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -2523,7 +2523,7 @@
       "type": "County",
       "county": "Mendocino",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -2532,7 +2532,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.09225,
-      "ratePercent": "9.22%",
+      "ratePercent": "9.225%",
       "districtTax": 0.0198,
       "notes": null
     },
@@ -2550,7 +2550,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -2577,7 +2577,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -2595,7 +2595,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -2613,7 +2613,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.08875,
-      "ratePercent": "8.88%",
+      "ratePercent": "8.875%",
       "districtTax": 0.0163,
       "notes": null
     },
@@ -2682,16 +2682,16 @@
     },
     {
       "location": "Monterey County",
-      "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Monterey County.",
+      "type": "County",
       "county": "County",
       "rate": 0,
       "ratePercent": "0.00%",
-      "districtTax": -0.0725,
+      "districtTax": 0,
       "notes": null
     },
     {
       "location": "Monterey County Unincorporated Area",
-      "type": "County",
+      "type": "Unincorporated Area",
       "county": "Monterey",
       "rate": 0.0875,
       "ratePercent": "8.75%",
@@ -2712,7 +2712,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -2748,7 +2748,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -2775,7 +2775,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -2838,7 +2838,7 @@
       "type": "City",
       "county": "Nevada",
       "rate": 0.08875,
-      "ratePercent": "8.88%",
+      "ratePercent": "8.875%",
       "districtTax": 0.0163,
       "notes": null
     },
@@ -2865,7 +2865,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -2910,7 +2910,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.08375,
-      "ratePercent": "8.38%",
+      "ratePercent": "8.375%",
       "districtTax": 0.0113,
       "notes": null
     },
@@ -2982,7 +2982,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.07975,
-      "ratePercent": "7.98%",
+      "ratePercent": "7.975%",
       "districtTax": 0.0073,
       "notes": null
     },
@@ -3027,7 +3027,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -3072,7 +3072,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -3108,7 +3108,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08975,
-      "ratePercent": "8.97%",
+      "ratePercent": "8.975%",
       "districtTax": 0.0173,
       "notes": null
     },
@@ -3135,7 +3135,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -3315,7 +3315,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -3414,7 +3414,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -3423,7 +3423,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.09225,
-      "ratePercent": "9.22%",
+      "ratePercent": "9.225%",
       "districtTax": 0.0198,
       "notes": null
     },
@@ -3468,7 +3468,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -3486,7 +3486,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -3639,7 +3639,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -3648,7 +3648,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -3711,7 +3711,7 @@
       "type": "City",
       "county": "San Francisco",
       "rate": 0.08625,
-      "ratePercent": "8.63%",
+      "ratePercent": "8.625%",
       "districtTax": 0.0137,
       "notes": null
     },
@@ -3720,7 +3720,7 @@
       "type": "County",
       "county": "San Francisco",
       "rate": 0.08625,
-      "ratePercent": "8.63%",
+      "ratePercent": "8.625%",
       "districtTax": 0.0137,
       "notes": null
     },
@@ -3738,7 +3738,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08725,
-      "ratePercent": "8.72%",
+      "ratePercent": "8.725%",
       "districtTax": 0.0148,
       "notes": null
     },
@@ -3756,7 +3756,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.07975,
-      "ratePercent": "7.98%",
+      "ratePercent": "7.975%",
       "districtTax": 0.0073,
       "notes": null
     },
@@ -3774,7 +3774,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -3846,7 +3846,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09625,
-      "ratePercent": "9.63%",
+      "ratePercent": "9.625%",
       "districtTax": 0.0238,
       "notes": null
     },
@@ -3855,7 +3855,7 @@
       "type": "County",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -3918,7 +3918,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -3927,7 +3927,7 @@
       "type": "County",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -3951,16 +3951,16 @@
     },
     {
       "location": "Santa Cruz County",
-      "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Santa Cruz County.",
+      "type": "County",
       "county": "County",
       "rate": 0,
       "ratePercent": "0.00%",
-      "districtTax": -0.0725,
+      "districtTax": 0,
       "notes": null
     },
     {
       "location": "Santa Cruz County Unincorporated Area",
-      "type": "County",
+      "type": "Unincorporated Area",
       "county": "Santa Cruz",
       "rate": 0.095,
       "ratePercent": "9.50%",
@@ -4026,7 +4026,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -4080,7 +4080,7 @@
       "type": "City",
       "county": "Fresno",
       "rate": 0.08475,
-      "ratePercent": "8.48%",
+      "ratePercent": "8.475%",
       "districtTax": 0.0123,
       "notes": null
     },
@@ -4170,7 +4170,7 @@
       "type": "County",
       "county": "Solano",
       "rate": 0.07375,
-      "ratePercent": "7.38%",
+      "ratePercent": "7.375%",
       "districtTax": 0.0013,
       "notes": null
     },
@@ -4260,7 +4260,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09875,
-      "ratePercent": "9.88%",
+      "ratePercent": "9.875%",
       "districtTax": 0.0263,
       "notes": null
     },
@@ -4269,7 +4269,7 @@
       "type": "County",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -4305,7 +4305,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -4314,7 +4314,7 @@
       "type": "City",
       "county": "Santa Clara",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -4503,7 +4503,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.08625,
-      "ratePercent": "8.63%",
+      "ratePercent": "8.625%",
       "districtTax": 0.0137,
       "notes": null
     },
@@ -4530,7 +4530,7 @@
       "type": "City",
       "county": "Mendocino",
       "rate": 0.08875,
-      "ratePercent": "8.88%",
+      "ratePercent": "8.875%",
       "districtTax": 0.0163,
       "notes": null
     },
@@ -4557,7 +4557,7 @@
       "type": "City",
       "county": "Solano",
       "rate": 0.08125,
-      "ratePercent": "8.13%",
+      "ratePercent": "8.125%",
       "districtTax": 0.0088,
       "notes": null
     },
@@ -4665,7 +4665,7 @@
       "type": "City",
       "county": "Stanislaus",
       "rate": 0.07875,
-      "ratePercent": "7.88%",
+      "ratePercent": "7.875%",
       "districtTax": 0.0063,
       "notes": null
     },
@@ -4782,7 +4782,7 @@
       "type": "City",
       "county": "Mendocino",
       "rate": 0.09125,
-      "ratePercent": "9.13%",
+      "ratePercent": "9.125%",
       "districtTax": 0.0188,
       "notes": null
     },
@@ -4836,7 +4836,7 @@
       "type": "City",
       "county": "San Mateo",
       "rate": 0.09375,
-      "ratePercent": "9.38%",
+      "ratePercent": "9.375%",
       "districtTax": 0.0213,
       "notes": null
     },
@@ -4887,16 +4887,16 @@
     },
     {
       "location": "Yuba County",
-      "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Yuba County.",
+      "type": "County",
       "county": "County",
       "rate": 0,
       "ratePercent": "0.00%",
-      "districtTax": -0.0725,
+      "districtTax": 0,
       "notes": null
     },
     {
       "location": "Yuba County Unincorporated Area",
-      "type": "County",
+      "type": "Unincorporated Area",
       "county": "Yuba",
       "rate": 0.0825,
       "ratePercent": "8.25%",
@@ -5109,7 +5109,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -5235,7 +5235,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -5253,7 +5253,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.09625,
-        "ratePercent": "9.63%",
+        "ratePercent": "9.625%",
         "districtTax": 0.0238,
         "notes": null
       },
@@ -5361,7 +5361,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -5397,7 +5397,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09625,
-        "ratePercent": "9.63%",
+        "ratePercent": "9.625%",
         "districtTax": 0.0238,
         "notes": null
       },
@@ -5469,7 +5469,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -5541,7 +5541,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.08375,
-        "ratePercent": "8.38%",
+        "ratePercent": "8.375%",
         "districtTax": 0.0113,
         "notes": null
       },
@@ -5667,7 +5667,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -5685,7 +5685,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -5703,7 +5703,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -5847,7 +5847,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -5865,7 +5865,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -5914,15 +5914,6 @@
         "districtTax": 0.015,
         "notes": null
       },
-      "del norte county": {
-        "location": "Del Norte County",
-        "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Del Norte County.",
-        "county": "County",
-        "rate": 0,
-        "ratePercent": "0.00%",
-        "districtTax": -0.0725,
-        "notes": null
-      },
       "del rey oaks": {
         "location": "Del Rey Oaks",
         "type": "City",
@@ -5964,7 +5955,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.08375,
-        "ratePercent": "8.38%",
+        "ratePercent": "8.375%",
         "districtTax": 0.0113,
         "notes": null
       },
@@ -6027,7 +6018,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -6171,7 +6162,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.08375,
-        "ratePercent": "8.38%",
+        "ratePercent": "8.375%",
         "districtTax": 0.0113,
         "notes": null
       },
@@ -6207,7 +6198,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.07975,
-        "ratePercent": "7.98%",
+        "ratePercent": "7.975%",
         "districtTax": 0.0073,
         "notes": null
       },
@@ -6261,7 +6252,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -6279,7 +6270,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -6342,7 +6333,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -6396,7 +6387,7 @@
         "type": "City",
         "county": "Nevada",
         "rate": 0.08875,
-        "ratePercent": "8.88%",
+        "ratePercent": "8.875%",
         "districtTax": 0.0163,
         "notes": null
       },
@@ -6450,7 +6441,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -6558,7 +6549,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -6585,7 +6576,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -6612,7 +6603,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -6720,17 +6711,8 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
-        "notes": null
-      },
-      "kern county": {
-        "location": "Kern County",
-        "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Kern County.",
-        "county": "County",
-        "rate": 0,
-        "ratePercent": "0.00%",
-        "districtTax": -0.0725,
         "notes": null
       },
       "king city": {
@@ -6747,7 +6729,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -7080,7 +7062,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7089,7 +7071,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7242,7 +7224,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.09225,
-        "ratePercent": "9.22%",
+        "ratePercent": "9.225%",
         "districtTax": 0.0198,
         "notes": null
       },
@@ -7260,7 +7242,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -7278,7 +7260,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -7296,7 +7278,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -7314,7 +7296,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.08875,
-        "ratePercent": "8.88%",
+        "ratePercent": "8.875%",
         "districtTax": 0.0163,
         "notes": null
       },
@@ -7363,15 +7345,6 @@
         "districtTax": 0.02,
         "notes": null
       },
-      "monterey county": {
-        "location": "Monterey County",
-        "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Monterey County.",
-        "county": "County",
-        "rate": 0,
-        "ratePercent": "0.00%",
-        "districtTax": -0.0725,
-        "notes": null
-      },
       "monterey park": {
         "location": "Monterey Park",
         "type": "City",
@@ -7386,7 +7359,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7422,7 +7395,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7449,7 +7422,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7503,7 +7476,7 @@
         "type": "City",
         "county": "Nevada",
         "rate": 0.08875,
-        "ratePercent": "8.88%",
+        "ratePercent": "8.875%",
         "districtTax": 0.0163,
         "notes": null
       },
@@ -7521,7 +7494,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -7566,7 +7539,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.08375,
-        "ratePercent": "8.38%",
+        "ratePercent": "8.375%",
         "districtTax": 0.0113,
         "notes": null
       },
@@ -7629,7 +7602,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.07975,
-        "ratePercent": "7.98%",
+        "ratePercent": "7.975%",
         "districtTax": 0.0073,
         "notes": null
       },
@@ -7674,7 +7647,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -7719,7 +7692,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -7755,7 +7728,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08975,
-        "ratePercent": "8.97%",
+        "ratePercent": "8.975%",
         "districtTax": 0.0173,
         "notes": null
       },
@@ -7782,7 +7755,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -7944,7 +7917,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -8043,7 +8016,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -8052,7 +8025,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.09225,
-        "ratePercent": "9.22%",
+        "ratePercent": "9.225%",
         "districtTax": 0.0198,
         "notes": null
       },
@@ -8097,7 +8070,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -8115,7 +8088,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -8232,7 +8205,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -8241,7 +8214,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -8295,7 +8268,7 @@
         "type": "City",
         "county": "San Francisco",
         "rate": 0.08625,
-        "ratePercent": "8.63%",
+        "ratePercent": "8.625%",
         "districtTax": 0.0137,
         "notes": null
       },
@@ -8313,7 +8286,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08725,
-        "ratePercent": "8.72%",
+        "ratePercent": "8.725%",
         "districtTax": 0.0148,
         "notes": null
       },
@@ -8331,7 +8304,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.07975,
-        "ratePercent": "7.98%",
+        "ratePercent": "7.975%",
         "districtTax": 0.0073,
         "notes": null
       },
@@ -8340,7 +8313,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -8403,7 +8376,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09625,
-        "ratePercent": "9.63%",
+        "ratePercent": "9.625%",
         "districtTax": 0.0238,
         "notes": null
       },
@@ -8457,7 +8430,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -8477,15 +8450,6 @@
         "rate": 0.0975,
         "ratePercent": "9.75%",
         "districtTax": 0.025,
-        "notes": null
-      },
-      "santa cruz county": {
-        "location": "Santa Cruz County",
-        "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Santa Cruz County.",
-        "county": "County",
-        "rate": 0,
-        "ratePercent": "0.00%",
-        "districtTax": -0.0725,
         "notes": null
       },
       "santa fe springs": {
@@ -8547,7 +8511,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -8601,7 +8565,7 @@
         "type": "City",
         "county": "Fresno",
         "rate": 0.08475,
-        "ratePercent": "8.48%",
+        "ratePercent": "8.475%",
         "districtTax": 0.0123,
         "notes": null
       },
@@ -8736,7 +8700,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09875,
-        "ratePercent": "9.88%",
+        "ratePercent": "9.875%",
         "districtTax": 0.0263,
         "notes": null
       },
@@ -8772,7 +8736,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -8781,7 +8745,7 @@
         "type": "City",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -8925,7 +8889,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.08625,
-        "ratePercent": "8.63%",
+        "ratePercent": "8.625%",
         "districtTax": 0.0137,
         "notes": null
       },
@@ -8952,7 +8916,7 @@
         "type": "City",
         "county": "Mendocino",
         "rate": 0.08875,
-        "ratePercent": "8.88%",
+        "ratePercent": "8.875%",
         "districtTax": 0.0163,
         "notes": null
       },
@@ -8979,7 +8943,7 @@
         "type": "City",
         "county": "Solano",
         "rate": 0.08125,
-        "ratePercent": "8.13%",
+        "ratePercent": "8.125%",
         "districtTax": 0.0088,
         "notes": null
       },
@@ -9078,7 +9042,7 @@
         "type": "City",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -9195,7 +9159,7 @@
         "type": "City",
         "county": "Mendocino",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
@@ -9249,7 +9213,7 @@
         "type": "City",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
@@ -9289,15 +9253,6 @@
         "districtTax": 0,
         "notes": null
       },
-      "yuba county": {
-        "location": "Yuba County",
-        "type": "Please refer to the applicable tax rates for the unincorporated area and incorporated cities within Yuba County.",
-        "county": "County",
-        "rate": 0,
-        "ratePercent": "0.00%",
-        "districtTax": -0.0725,
-        "notes": null
-      },
       "yucaipa": {
         "location": "Yucaipa",
         "type": "City",
@@ -9327,15 +9282,6 @@
         "districtTax": 0.03,
         "notes": null
       },
-      "alameda county county": {
-        "location": "Alameda County",
-        "type": "County",
-        "county": "Alameda",
-        "rate": 0.1025,
-        "ratePercent": "10.25%",
-        "districtTax": 0.03,
-        "notes": null
-      },
       "alpine county": {
         "location": "Alpine County",
         "type": "County",
@@ -9345,7 +9291,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "alpine county county": {
+      "alpine": {
         "location": "Alpine County",
         "type": "County",
         "county": "Alpine",
@@ -9363,7 +9309,7 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "amador county county": {
+      "amador": {
         "location": "Amador County",
         "type": "County",
         "county": "Amador",
@@ -9381,7 +9327,7 @@
         "districtTax": 0.01,
         "notes": null
       },
-      "butte county county": {
+      "butte": {
         "location": "Butte County",
         "type": "County",
         "county": "Butte",
@@ -9399,7 +9345,7 @@
         "districtTax": 0.01,
         "notes": null
       },
-      "calaveras county county": {
+      "calaveras": {
         "location": "Calaveras County",
         "type": "County",
         "county": "Calaveras",
@@ -9417,15 +9363,6 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "colusa county county": {
-        "location": "Colusa County",
-        "type": "County",
-        "county": "Colusa",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "contra costa county": {
         "location": "Contra Costa County",
         "type": "County",
@@ -9435,7 +9372,7 @@
         "districtTax": 0.015,
         "notes": null
       },
-      "contra costa county county": {
+      "contra costa": {
         "location": "Contra Costa County",
         "type": "County",
         "county": "Contra Costa",
@@ -9444,18 +9381,27 @@
         "districtTax": 0.015,
         "notes": null
       },
+      "del norte county": {
+        "location": "Del Norte County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
+      "del norte": {
+        "location": "Del Norte County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
       "del norte county unincorporated area": {
         "location": "Del Norte County Unincorporated Area",
-        "type": "County",
-        "county": "Del Norte",
-        "rate": 0.0825,
-        "ratePercent": "8.25%",
-        "districtTax": 0.01,
-        "notes": "This tax rate applies only to unincorporated areas of Del Norte County. Please refer to the applicable incorporated city within the county for that city's tax rate."
-      },
-      "del norte county unincorporated area county": {
-        "location": "Del Norte County Unincorporated Area",
-        "type": "County",
+        "type": "Unincorporated Area",
         "county": "Del Norte",
         "rate": 0.0825,
         "ratePercent": "8.25%",
@@ -9471,7 +9417,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "el dorado county county": {
+      "el dorado": {
         "location": "El Dorado County",
         "type": "County",
         "county": "El Dorado",
@@ -9485,16 +9431,7 @@
         "type": "County",
         "county": "Fresno",
         "rate": 0.07975,
-        "ratePercent": "7.98%",
-        "districtTax": 0.0073,
-        "notes": null
-      },
-      "fresno county county": {
-        "location": "Fresno County",
-        "type": "County",
-        "county": "Fresno",
-        "rate": 0.07975,
-        "ratePercent": "7.98%",
+        "ratePercent": "7.975%",
         "districtTax": 0.0073,
         "notes": null
       },
@@ -9507,7 +9444,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "glenn county county": {
+      "glenn": {
         "location": "Glenn County",
         "type": "County",
         "county": "Glenn",
@@ -9525,7 +9462,7 @@
         "districtTax": 0.015,
         "notes": null
       },
-      "humboldt county county": {
+      "humboldt": {
         "location": "Humboldt County",
         "type": "County",
         "county": "Humboldt",
@@ -9543,15 +9480,6 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "imperial county county": {
-        "location": "Imperial County",
-        "type": "County",
-        "county": "Imperial",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "inyo county": {
         "location": "Inyo County",
         "type": "County",
@@ -9561,7 +9489,7 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "inyo county county": {
+      "inyo": {
         "location": "Inyo County",
         "type": "County",
         "county": "Inyo",
@@ -9570,18 +9498,27 @@
         "districtTax": 0.005,
         "notes": null
       },
+      "kern county": {
+        "location": "Kern County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
+      "kern": {
+        "location": "Kern County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
       "kern county unincorporated area": {
         "location": "Kern County Unincorporated Area",
-        "type": "County",
-        "county": "Kern",
-        "rate": 0.0825,
-        "ratePercent": "8.25%",
-        "districtTax": 0.01,
-        "notes": "This tax rate applies only to unincorporated areas of Kern County. Please refer to the applicable incorporated city within the county for that city's tax rate."
-      },
-      "kern county unincorporated area county": {
-        "location": "Kern County Unincorporated Area",
-        "type": "County",
+        "type": "Unincorporated Area",
         "county": "Kern",
         "rate": 0.0825,
         "ratePercent": "8.25%",
@@ -9597,7 +9534,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "kings county county": {
+      "kings": {
         "location": "Kings County",
         "type": "County",
         "county": "Kings",
@@ -9615,7 +9552,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "lake county county": {
+      "lake": {
         "location": "Lake County",
         "type": "County",
         "county": "Lake",
@@ -9633,7 +9570,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "lassen county county": {
+      "lassen": {
         "location": "Lassen County",
         "type": "County",
         "county": "Lassen",
@@ -9651,25 +9588,7 @@
         "districtTax": 0.025,
         "notes": null
       },
-      "los angeles county county": {
-        "location": "Los Angeles County",
-        "type": "County",
-        "county": "Los Angeles",
-        "rate": 0.0975,
-        "ratePercent": "9.75%",
-        "districtTax": 0.025,
-        "notes": null
-      },
       "madera county": {
-        "location": "Madera County",
-        "type": "County",
-        "county": "Madera",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "madera county county": {
         "location": "Madera County",
         "type": "County",
         "county": "Madera",
@@ -9687,7 +9606,7 @@
         "districtTax": 0.01,
         "notes": null
       },
-      "marin county county": {
+      "marin": {
         "location": "Marin County",
         "type": "County",
         "county": "Marin",
@@ -9705,7 +9624,7 @@
         "districtTax": 0.01,
         "notes": null
       },
-      "mariposa county county": {
+      "mariposa": {
         "location": "Mariposa County",
         "type": "County",
         "county": "Mariposa",
@@ -9719,29 +9638,20 @@
         "type": "County",
         "county": "Mendocino",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
-      "mendocino county county": {
+      "mendocino": {
         "location": "Mendocino County",
         "type": "County",
         "county": "Mendocino",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
       "merced county": {
-        "location": "Merced County",
-        "type": "County",
-        "county": "Merced",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "merced county county": {
         "location": "Merced County",
         "type": "County",
         "county": "Merced",
@@ -9759,7 +9669,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "modoc county county": {
+      "modoc": {
         "location": "Modoc County",
         "type": "County",
         "county": "Modoc",
@@ -9777,7 +9687,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "mono county county": {
+      "mono": {
         "location": "Mono County",
         "type": "County",
         "county": "Mono",
@@ -9786,18 +9696,18 @@
         "districtTax": 0,
         "notes": null
       },
+      "monterey county": {
+        "location": "Monterey County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
       "monterey county unincorporated area": {
         "location": "Monterey County Unincorporated Area",
-        "type": "County",
-        "county": "Monterey",
-        "rate": 0.0875,
-        "ratePercent": "8.75%",
-        "districtTax": 0.015,
-        "notes": "This tax rate applies only to unincorporated areas of Monterey County. Please refer to the applicable incorporated city within the county for that city's tax rate."
-      },
-      "monterey county unincorporated area county": {
-        "location": "Monterey County Unincorporated Area",
-        "type": "County",
+        "type": "Unincorporated Area",
         "county": "Monterey",
         "rate": 0.0875,
         "ratePercent": "8.75%",
@@ -9805,15 +9715,6 @@
         "notes": "This tax rate applies only to unincorporated areas of Monterey County. Please refer to the applicable incorporated city within the county for that city's tax rate."
       },
       "napa county": {
-        "location": "Napa County",
-        "type": "County",
-        "county": "Napa",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "napa county county": {
         "location": "Napa County",
         "type": "County",
         "county": "Napa",
@@ -9831,7 +9732,7 @@
         "districtTax": 0.0025,
         "notes": null
       },
-      "nevada county county": {
+      "nevada": {
         "location": "Nevada County",
         "type": "County",
         "county": "Nevada",
@@ -9849,15 +9750,6 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "orange county county": {
-        "location": "Orange County",
-        "type": "County",
-        "county": "Orange",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "placer county": {
         "location": "Placer County",
         "type": "County",
@@ -9867,7 +9759,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "placer county county": {
+      "placer": {
         "location": "Placer County",
         "type": "County",
         "county": "Placer",
@@ -9885,7 +9777,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "plumas county county": {
+      "plumas": {
         "location": "Plumas County",
         "type": "County",
         "county": "Plumas",
@@ -9903,25 +9795,7 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "riverside county county": {
-        "location": "Riverside County",
-        "type": "County",
-        "county": "Riverside",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "sacramento county": {
-        "location": "Sacramento County",
-        "type": "County",
-        "county": "Sacramento",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "sacramento county county": {
         "location": "Sacramento County",
         "type": "County",
         "county": "Sacramento",
@@ -9939,7 +9813,7 @@
         "districtTax": 0.01,
         "notes": null
       },
-      "san benito county county": {
+      "san benito": {
         "location": "San Benito County",
         "type": "County",
         "county": "San Benito",
@@ -9957,25 +9831,7 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "san bernardino county county": {
-        "location": "San Bernardino County",
-        "type": "County",
-        "county": "San Bernardino",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "san diego county": {
-        "location": "San Diego County",
-        "type": "County",
-        "county": "San Diego",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "san diego county county": {
         "location": "San Diego County",
         "type": "County",
         "county": "San Diego",
@@ -9989,29 +9845,11 @@
         "type": "County",
         "county": "San Francisco",
         "rate": 0.08625,
-        "ratePercent": "8.63%",
-        "districtTax": 0.0137,
-        "notes": null
-      },
-      "san francisco county county": {
-        "location": "San Francisco County",
-        "type": "County",
-        "county": "San Francisco",
-        "rate": 0.08625,
-        "ratePercent": "8.63%",
+        "ratePercent": "8.625%",
         "districtTax": 0.0137,
         "notes": null
       },
       "san joaquin county": {
-        "location": "San Joaquin County",
-        "type": "County",
-        "county": "San Joaquin",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "san joaquin county county": {
         "location": "San Joaquin County",
         "type": "County",
         "county": "San Joaquin",
@@ -10029,43 +9867,16 @@
         "districtTax": 0,
         "notes": null
       },
-      "san luis obispo county county": {
-        "location": "San Luis Obispo County",
-        "type": "County",
-        "county": "San Luis Obispo",
-        "rate": 0.0725,
-        "ratePercent": "7.25%",
-        "districtTax": 0,
-        "notes": null
-      },
       "san mateo county": {
         "location": "San Mateo County",
         "type": "County",
         "county": "San Mateo",
         "rate": 0.09375,
-        "ratePercent": "9.38%",
-        "districtTax": 0.0213,
-        "notes": null
-      },
-      "san mateo county county": {
-        "location": "San Mateo County",
-        "type": "County",
-        "county": "San Mateo",
-        "rate": 0.09375,
-        "ratePercent": "9.38%",
+        "ratePercent": "9.375%",
         "districtTax": 0.0213,
         "notes": null
       },
       "santa barbara county": {
-        "location": "Santa Barbara County",
-        "type": "County",
-        "county": "Santa Barbara",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
-      "santa barbara county county": {
         "location": "Santa Barbara County",
         "type": "County",
         "county": "Santa Barbara",
@@ -10079,31 +9890,22 @@
         "type": "County",
         "county": "Santa Clara",
         "rate": 0.09125,
-        "ratePercent": "9.13%",
+        "ratePercent": "9.125%",
         "districtTax": 0.0188,
         "notes": null
       },
-      "santa clara county county": {
-        "location": "Santa Clara County",
+      "santa cruz county": {
+        "location": "Santa Cruz County",
         "type": "County",
-        "county": "Santa Clara",
-        "rate": 0.09125,
-        "ratePercent": "9.13%",
-        "districtTax": 0.0188,
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
         "notes": null
       },
       "santa cruz county unincorporated area": {
         "location": "Santa Cruz County Unincorporated Area",
-        "type": "County",
-        "county": "Santa Cruz",
-        "rate": 0.095,
-        "ratePercent": "9.50%",
-        "districtTax": 0.0225,
-        "notes": "This tax rate applies only to unincorporated areas of Santa Cruz County. Please refer to the applicable incorporated city within the county for that city's tax rate."
-      },
-      "santa cruz county unincorporated area county": {
-        "location": "Santa Cruz County Unincorporated Area",
-        "type": "County",
+        "type": "Unincorporated Area",
         "county": "Santa Cruz",
         "rate": 0.095,
         "ratePercent": "9.50%",
@@ -10119,7 +9921,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "shasta county county": {
+      "shasta": {
         "location": "Shasta County",
         "type": "County",
         "county": "Shasta",
@@ -10137,7 +9939,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "sierra county county": {
+      "sierra": {
         "location": "Sierra County",
         "type": "County",
         "county": "Sierra",
@@ -10155,7 +9957,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "siskiyou county county": {
+      "siskiyou": {
         "location": "Siskiyou County",
         "type": "County",
         "county": "Siskiyou",
@@ -10169,29 +9971,20 @@
         "type": "County",
         "county": "Solano",
         "rate": 0.07375,
-        "ratePercent": "7.38%",
+        "ratePercent": "7.375%",
         "districtTax": 0.0013,
         "notes": null
       },
-      "solano county county": {
+      "solano": {
         "location": "Solano County",
         "type": "County",
         "county": "Solano",
         "rate": 0.07375,
-        "ratePercent": "7.38%",
+        "ratePercent": "7.375%",
         "districtTax": 0.0013,
         "notes": null
       },
       "sonoma county": {
-        "location": "Sonoma County",
-        "type": "County",
-        "county": "Sonoma",
-        "rate": 0.0925,
-        "ratePercent": "9.25%",
-        "districtTax": 0.02,
-        "notes": null
-      },
-      "sonoma county county": {
         "location": "Sonoma County",
         "type": "County",
         "county": "Sonoma",
@@ -10205,16 +9998,16 @@
         "type": "County",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
-      "stanislaus county county": {
+      "stanislaus": {
         "location": "Stanislaus County",
         "type": "County",
         "county": "Stanislaus",
         "rate": 0.07875,
-        "ratePercent": "7.88%",
+        "ratePercent": "7.875%",
         "districtTax": 0.0063,
         "notes": null
       },
@@ -10227,7 +10020,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "sutter county county": {
+      "sutter": {
         "location": "Sutter County",
         "type": "County",
         "county": "Sutter",
@@ -10245,15 +10038,6 @@
         "districtTax": 0,
         "notes": null
       },
-      "tehama county county": {
-        "location": "Tehama County",
-        "type": "County",
-        "county": "Tehama",
-        "rate": 0.0725,
-        "ratePercent": "7.25%",
-        "districtTax": 0,
-        "notes": null
-      },
       "trinity county": {
         "location": "Trinity County",
         "type": "County",
@@ -10263,7 +10047,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "trinity county county": {
+      "trinity": {
         "location": "Trinity County",
         "type": "County",
         "county": "Trinity",
@@ -10281,15 +10065,6 @@
         "districtTax": 0.005,
         "notes": null
       },
-      "tulare county county": {
-        "location": "Tulare County",
-        "type": "County",
-        "county": "Tulare",
-        "rate": 0.0775,
-        "ratePercent": "7.75%",
-        "districtTax": 0.005,
-        "notes": null
-      },
       "tuolumne county": {
         "location": "Tuolumne County",
         "type": "County",
@@ -10299,7 +10074,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "tuolumne county county": {
+      "tuolumne": {
         "location": "Tuolumne County",
         "type": "County",
         "county": "Tuolumne",
@@ -10317,15 +10092,6 @@
         "districtTax": 0,
         "notes": null
       },
-      "ventura county county": {
-        "location": "Ventura County",
-        "type": "County",
-        "county": "Ventura",
-        "rate": 0.0725,
-        "ratePercent": "7.25%",
-        "districtTax": 0,
-        "notes": null
-      },
       "yolo county": {
         "location": "Yolo County",
         "type": "County",
@@ -10335,7 +10101,7 @@
         "districtTax": 0,
         "notes": null
       },
-      "yolo county county": {
+      "yolo": {
         "location": "Yolo County",
         "type": "County",
         "county": "Yolo",
@@ -10344,18 +10110,27 @@
         "districtTax": 0,
         "notes": null
       },
+      "yuba county": {
+        "location": "Yuba County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
+      "yuba": {
+        "location": "Yuba County",
+        "type": "County",
+        "county": "County",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": null
+      },
       "yuba county unincorporated area": {
         "location": "Yuba County Unincorporated Area",
-        "type": "County",
-        "county": "Yuba",
-        "rate": 0.0825,
-        "ratePercent": "8.25%",
-        "districtTax": 0.01,
-        "notes": "This tax rate applies only to unincorporated areas of Yuba County. Please refer to the applicable incorporated city within the county for that city's tax rate."
-      },
-      "yuba county unincorporated area county": {
-        "location": "Yuba County Unincorporated Area",
-        "type": "County",
+        "type": "Unincorporated Area",
         "county": "Yuba",
         "rate": 0.0825,
         "ratePercent": "8.25%",

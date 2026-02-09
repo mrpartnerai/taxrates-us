@@ -1,4 +1,8 @@
 /**
+ * taxrates-us type definitions
+ */
+
+/**
  * Request parameters for tax rate lookup
  */
 export interface TaxRateRequest {
@@ -6,7 +10,9 @@ export interface TaxRateRequest {
   state: string;
   /** City name (optional, case-insensitive) */
   city?: string;
-  /** ZIP code (optional, not yet fully supported) */
+  /** County name (optional, case-insensitive) */
+  county?: string;
+  /** ZIP code (optional, 5-digit) */
   zip?: string;
 }
 
@@ -26,7 +32,11 @@ export interface TaxRateResponse {
   components: {
     /** State base tax rate */
     state: number;
-    /** District/local tax rate */
+    /** County base rate (portion of state rate allocated to county) */
+    county: number;
+    /** City-specific district tax */
+    city: number;
+    /** Special district taxes (transit, etc.) */
     district: number;
   };
   /** Data source */
@@ -34,9 +44,13 @@ export interface TaxRateResponse {
   /** Effective date of this rate */
   effectiveDate: string;
   /** Whether this state is supported */
-  supported?: boolean;
+  supported: boolean;
   /** Reason for unsupported state */
   reason?: string;
+  /** Lookup method used */
+  lookupMethod?: 'city' | 'county' | 'zip' | 'state-default';
+  /** County the jurisdiction is in (for city lookups) */
+  county?: string;
 }
 
 /**
@@ -44,12 +58,20 @@ export interface TaxRateResponse {
  */
 export interface Jurisdiction {
   location: string;
-  type: 'City' | 'County' | 'Unincorporated Area';
+  type: 'City' | 'County' | 'Unincorporated Area' | 'State';
   county: string;
   rate: number;
   ratePercent: string;
   districtTax: number;
   notes: string | null;
+}
+
+/**
+ * ZIP code to city/county mapping
+ */
+export interface ZipEntry {
+  city: string;
+  county: string;
 }
 
 /**
@@ -67,5 +89,6 @@ export interface TaxRateData {
   lookup: {
     byCity: Record<string, Jurisdiction>;
     byCounty: Record<string, Jurisdiction>;
+    byState?: Record<string, Jurisdiction>;
   };
 }

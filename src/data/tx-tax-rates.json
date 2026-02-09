@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Texas Comptroller of Public Accounts",
+    "lastUpdated": "2026-02-08",
+    "jurisdictionCount": 1,
+    "version": "0.2.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Texas",
+      "type": "State",
+      "county": "State",
+      "rate": 0.0625,
+      "ratePercent": "6.25%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 2% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "texas": {
+        "location": "Texas",
+        "type": "State",
+        "county": "State",
+        "rate": 0.0625,
+        "ratePercent": "6.25%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 2% additional tax."
+      }
+    }
+  }
+}

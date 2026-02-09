@@ -3,18 +3,19 @@
 [![npm version](https://badge.fury.io/js/taxrates-us.svg)](https://www.npmjs.com/package/taxrates-us)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Accurate US sales tax rate lookups — starting with California**
+**Accurate US sales tax rate lookups — 7 states and growing**
 
-Open-source npm package for looking up sales tax rates by address. Self-hosted with bundled rate data, zero external API dependencies, and works completely offline.
+Open-source npm package and hosted API for looking up sales tax rates. Self-hosted with bundled rate data, zero external API dependencies, and works completely offline.
 
 ## Features
 
 ✅ **Zero dependencies** — Pure TypeScript, no external runtime deps  
 ✅ **Works offline** — Tax rate data bundled with the package  
 ✅ **TypeScript native** — Full type safety and IntelliSense support  
-✅ **California complete** — 546 jurisdictions (cities, counties, unincorporated areas)  
-✅ **Source attribution** — All rates sourced from California CDTFA  
-✅ **Self-updating** — Built-in CLI to fetch latest rates  
+✅ **7 states supported** — CA (546 jurisdictions), TX, NY, FL, WA, NV, OR  
+✅ **Hosted API** — Vercel serverless endpoints (optional)  
+✅ **Auto-detect state** — From ZIP code prefix  
+✅ **Source attribution** — All rates from official state tax authorities  
 ✅ **Open source** — MIT licensed, verifiable data
 
 ## Installation
@@ -23,30 +24,94 @@ Open-source npm package for looking up sales tax rates by address. Self-hosted w
 npm install taxrates-us
 ```
 
-## Usage
+## Quick Start
 
-### Basic Example
+### NPM Package
 
 ```typescript
 import { getTaxRate } from 'taxrates-us';
 
-// Look up by city
+// Auto-detect state from ZIP code
+const rate = getTaxRate({ zip: '90210' });
+console.log(rate.percentage); // "9.50%" (Beverly Hills, CA)
+console.log(rate.state);      // "CA"
+
+// Explicit state lookup
+const txRate = getTaxRate({ state: 'TX' });
+console.log(txRate.percentage); // "6.25%"
+
+// California city lookup (546 jurisdictions)
+const sf = getTaxRate({ state: 'CA', city: 'San Francisco' });
+console.log(sf.percentage); // "8.625%"
+```
+
+### Hosted API
+
+```bash
+# Get tax rate by ZIP code
+curl "https://taxrates-us.vercel.app/api/rate?zip=90210"
+
+# Get tax rate by state
+curl "https://taxrates-us.vercel.app/api/rate?state=TX"
+
+# List supported states
+curl "https://taxrates-us.vercel.app/api/states"
+```
+
+## Supported States
+
+| State | Code | Base Rate | Jurisdictions | Details |
+|-------|------|-----------|---------------|---------|
+| **California** | CA | 7.25% | 546 | Cities, counties, unincorporated areas |
+| **Texas** | TX | 6.25% | Base only | Local rates vary |
+| **New York** | NY | 4.00% | Base only | NYC: 8.875% total |
+| **Florida** | FL | 6.00% | Base only | County surtax varies |
+| **Washington** | WA | 6.50% | Base only | Local rates 8-10% total |
+| **Nevada** | NV | 6.85% | Base only | County add-ons vary |
+| **Oregon** | OR | 0.00% | Base only | No sales tax |
+
+**California** has the most detailed coverage with 546 jurisdictions. Other states return base state rates.
+
+## Usage
+
+### Auto-Detect State from ZIP
+
+```typescript
+import { getTaxRate } from 'taxrates-us';
+
+// ZIP code automatically determines the state
+const dallas = getTaxRate({ zip: '75201' }); // TX
+const miami = getTaxRate({ zip: '33101' });  // FL
+const seattle = getTaxRate({ zip: '98101' }); // WA
+
+console.log(dallas.state);  // "TX"
+console.log(miami.state);   // "FL"
+console.log(seattle.state); // "WA"
+```
+
+### State Override
+
+```typescript
+// ZIP detection can be overridden
+const rate = getTaxRate({ zip: '90210', state: 'TX' });
+console.log(rate.state); // "TX" (not CA)
+```
+
+### California Detailed Lookups
+
+```typescript
+// City lookup (546 cities)
 const sacramento = getTaxRate({ state: 'CA', city: 'Sacramento' });
 console.log(sacramento.percentage); // "8.75%"
-console.log(sacramento.rate);       // 0.0875
 
-// Look up by county
-const alameda = getTaxRate({ state: 'CA', city: 'Alameda County' });
-console.log(alameda.percentage);    // "10.25%"
+// County lookup
+const alameda = getTaxRate({ state: 'CA', county: 'Alameda' });
+console.log(alameda.percentage); // "10.25%"
 
-// State base rate (when city not found)
-const unknown = getTaxRate({ state: 'CA', city: 'Unknown City' });
-console.log(unknown.percentage);    // "7.25%" (CA state base)
-
-// Unsupported state (no nexus)
-const texas = getTaxRate({ state: 'TX' });
-console.log(texas.rate);            // 0
-console.log(texas.supported);       // false
+// ZIP code to city mapping (CA only)
+const beverly = getTaxRate({ state: 'CA', zip: '90210' });
+console.log(beverly.jurisdiction); // "Beverly Hills"
+console.log(beverly.percentage);   // "9.50%"
 ```
 
 ### Response Format
@@ -55,15 +120,19 @@ console.log(texas.supported);       // false
 interface TaxRateResponse {
   rate: number;              // 0.0875 for 8.75%
   percentage: string;        // "8.75%"
-  jurisdiction: string;      // "Sacramento"
-  state: string;             // "CA"
+  jurisdiction: string;      // "Sacramento" or "Texas"
+  state: string;             // "CA", "TX", etc.
+  county?: string;           // "Sacramento" (CA only)
   components: {
-    state: number;           // 0.0725 (CA base rate)
-    district: number;        // 0.015 (local districts)
+    state: number;           // State base rate
+    county: number;          // County portion (CA only)
+    city: number;            // City portion (CA only)
+    district: number;        // Special districts
   };
-  source: string;            // "California CDTFA"
+  source: string;            // "California CDTFA", "Texas Comptroller", etc.
   effectiveDate: string;     // "2026-01-01"
-  supported: boolean;        // true for CA, false otherwise
+  supported: boolean;        // true for supported states
+  lookupMethod?: string;     // "zip", "city", "county", "state-default"
   reason?: string;           // Explanation for unsupported states
 }
 ```
@@ -73,151 +142,135 @@ interface TaxRateResponse {
 ```typescript
 import { getTaxRate } from 'taxrates-us';
 
-function calculateTax(amount: number, state: string, city?: string): number {
-  const { rate } = getTaxRate({ state, city });
-  return Math.round(amount * rate * 100) / 100; // Round to 2 decimals
+function calculateTax(amount: number, zip: string): number {
+  const { rate } = getTaxRate({ zip });
+  return Math.round(amount * rate * 100) / 100;
 }
 
 const subtotal = 100.00;
-const tax = calculateTax(subtotal, 'CA', 'Los Angeles');
+const tax = calculateTax(subtotal, '90210');
 const total = subtotal + tax;
 
 console.log(`Subtotal: $${subtotal.toFixed(2)}`);
-console.log(`Tax (9.75%): $${tax.toFixed(2)}`);
+console.log(`Tax: $${tax.toFixed(2)}`);
 console.log(`Total: $${total.toFixed(2)}`);
-// Output:
-// Subtotal: $100.00
-// Tax (9.75%): $9.75
-// Total: $109.75
 ```
 
-### Get Metadata
+### Get Supported States
 
 ```typescript
-import { getMetadata, getSupportedStates } from 'taxrates-us';
+import { getStates } from 'taxrates-us';
 
-const metadata = getMetadata();
-console.log(metadata);
-/*
+const states = getStates();
+console.log(states); // ["CA", "TX", "NY", "FL", "WA", "NV", "OR"]
+```
+
+## Hosted API
+
+The package includes Vercel serverless functions for hosted API access.
+
+### Endpoints
+
+**Base URL**: `https://taxrates-us.vercel.app`
+
+#### `GET /api/rate`
+
+Look up tax rate by location.
+
+**Query Parameters:**
+- `zip` (string, optional): ZIP code (auto-detects state)
+- `state` (string, optional): Two-letter state code
+- `city` (string, optional): City name (CA only)
+- `county` (string, optional): County name (CA only)
+
+**Examples:**
+
+```bash
+# By ZIP code
+curl "https://taxrates-us.vercel.app/api/rate?zip=90210"
+
+# By state
+curl "https://taxrates-us.vercel.app/api/rate?state=TX"
+
+# By city (CA)
+curl "https://taxrates-us.vercel.app/api/rate?state=CA&city=Sacramento"
+
+# Override state detection
+curl "https://taxrates-us.vercel.app/api/rate?zip=90210&state=CA"
+```
+
+**Response:**
+
+```json
 {
-  effectiveDate: "2026-01-01",
-  source: "California Department of Tax and Fee Administration (CDTFA)",
-  lastUpdated: "2026-02-08",
-  jurisdictionCount: 546,
-  version: "0.1.0",
-  supportedStates: ["CA"]
+  "rate": 0.0875,
+  "percentage": "8.75%",
+  "jurisdiction": "Sacramento",
+  "state": "CA",
+  "county": "Sacramento",
+  "components": {
+    "state": 0.06,
+    "county": 0.0125,
+    "city": 0,
+    "district": 0.005
+  },
+  "source": "California Department of Tax and Fee Administration (CDTFA)",
+  "effectiveDate": "2026-01-01",
+  "supported": true,
+  "lookupMethod": "city"
 }
-*/
-
-const states = getSupportedStates();
-console.log(states); // ["CA"]
 ```
 
-## Supported States
+#### `GET /api/states`
 
-Currently supported:
-- ✅ **California** (546 jurisdictions)
+Get list of supported states.
 
-Coming soon:
-- 🔜 Texas
-- 🔜 Florida
-- 🔜 New York
-- 🔜 Washington
-- 🔜 [All 50 states]
-
-## Data Source
-
-California tax rates are sourced from the **California Department of Tax and Fee Administration (CDTFA)**, the official state tax authority.
-
-- **Source**: [CDTFA Sales and Use Tax Rates](https://www.cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm)
-- **Effective Date**: January 1, 2026
-- **Update Frequency**: Quarterly (January, April, July, October)
-- **Jurisdictions**: 546 (483 cities, 58 counties, 5 unincorporated areas)
-
-## Updating Tax Rates
-
-To fetch the latest tax rates from CDTFA:
+**Example:**
 
 ```bash
-npm run update-rates
+curl "https://taxrates-us.vercel.app/api/states"
 ```
 
-This script will:
-1. Download the latest CDTFA CSV file
-2. Validate and parse the data
-3. Rebuild the bundled JSON file
-4. Run tests to verify accuracy
+**Response:**
 
-**Note**: After updating, you should rebuild and republish the package for the new rates to take effect for your users.
+```json
+{
+  "states": ["CA", "TX", "NY", "FL", "WA", "NV", "OR"],
+  "count": 7
+}
+```
 
-## CLI Usage (Future)
+#### `GET /api`
+
+Health check and API documentation.
+
+**Example:**
 
 ```bash
-# Look up rate by city
-npx taxrates-us lookup --state CA --city Sacramento
-
-# Update local rate data
-npx taxrates-us update
+curl "https://taxrates-us.vercel.app/api"
 ```
 
-*CLI coming in v0.2.0*
+### API Features
 
-## API Reference
+- **CORS enabled** — Use from any domain
+- **Rate limiting placeholder** — Add your own rate limiting logic
+- **Vercel Edge Network** — Fast global response times
+- **Serverless** — Zero infrastructure management
+- **Free tier** — Generous Vercel free tier limits
 
-### `getTaxRate(request: TaxRateRequest): TaxRateResponse`
+### Deploy Your Own API
 
-Look up tax rate for a location.
+1. Fork the repository
+2. Connect to Vercel
+3. Deploy automatically
 
-**Parameters:**
-- `request.state` (string, required): Two-letter state code (e.g., "CA")
-- `request.city` (string, optional): City name (case-insensitive)
-- `request.zip` (string, optional): ZIP code *(not yet fully supported)*
-
-**Returns:** `TaxRateResponse` object with rate, percentage, jurisdiction, and source info
-
-### `getSupportedStates(): string[]`
-
-Get list of currently supported state codes.
-
-**Returns:** Array of state codes (e.g., `["CA"]`)
-
-### `getMetadata(): object`
-
-Get metadata about the bundled tax rate data.
-
-**Returns:** Object with effective date, source, version, and jurisdiction count
-
-## Edge Cases
-
-### Case Sensitivity
-City names are case-insensitive:
-```typescript
-getTaxRate({ state: 'CA', city: 'sacramento' });   // ✅ Works
-getTaxRate({ state: 'CA', city: 'SACRAMENTO' });   // ✅ Works
-getTaxRate({ state: 'CA', city: 'SaCrAmEnTo' });   // ✅ Works
+```bash
+# Or deploy via CLI
+npm install -g vercel
+vercel
 ```
 
-### County Lookups
-Counties can be looked up with or without "County" suffix:
-```typescript
-getTaxRate({ state: 'CA', city: 'Alameda County' }); // ✅ Works
-getTaxRate({ state: 'CA', city: 'Alameda' });        // ✅ Also works
-```
-
-### City Not Found
-If a city isn't found, returns the state base rate:
-```typescript
-const result = getTaxRate({ state: 'CA', city: 'NonexistentCity' });
-// Returns: 7.25% (CA state base rate)
-// jurisdiction: "California (State Base Rate)"
-```
-
-### Unsupported States
-States other than CA return 0% (no nexus):
-```typescript
-const texas = getTaxRate({ state: 'TX' });
-// rate: 0, supported: false, reason: "No nexus in TX..."
-```
+The API functions are in the `api/` directory and automatically deploy with Vercel.
 
 ## Examples
 
@@ -231,25 +284,13 @@ interface CartItem {
   price: number;
 }
 
-function calculateCheckout(
-  items: CartItem[],
-  shippingState: string,
-  shippingCity: string
-) {
+function calculateCheckout(items: CartItem[], shippingZip: string) {
   const subtotal = items.reduce((sum, item) => sum + item.price, 0);
-  const { rate, percentage } = getTaxRate({ 
-    state: shippingState, 
-    city: shippingCity 
-  });
+  const { rate, percentage, state } = getTaxRate({ zip: shippingZip });
   const tax = Math.round(subtotal * rate * 100) / 100;
   const total = subtotal + tax;
   
-  return {
-    subtotal,
-    taxRate: percentage,
-    tax,
-    total
-  };
+  return { subtotal, taxRate: percentage, tax, total, state };
 }
 
 const cart = [
@@ -257,55 +298,120 @@ const cart = [
   { name: 'Gadget', price: 49.99 }
 ];
 
-const checkout = calculateCheckout(cart, 'CA', 'San Francisco');
+const checkout = calculateCheckout(cart, '90210');
 console.log(checkout);
-// { subtotal: 79.98, taxRate: "8.63%", tax: 6.90, total: 86.88 }
+// { subtotal: 79.98, taxRate: "9.50%", tax: 7.60, total: 87.58, state: "CA" }
 ```
 
-### Invoice Generator
+### Multi-State Pricing Table
 
 ```typescript
-import { getTaxRate } from 'taxrates-us';
+import { getTaxRate, getStates } from 'taxrates-us';
 
-interface Invoice {
-  lineItems: Array<{ description: string; amount: number }>;
-  customerState: string;
-  customerCity: string;
-}
+const basePrice = 100.00;
+const states = getStates();
 
-function generateInvoice(invoice: Invoice) {
-  const subtotal = invoice.lineItems.reduce((s, i) => s + i.amount, 0);
-  const taxInfo = getTaxRate({ 
-    state: invoice.customerState, 
-    city: invoice.customerCity 
-  });
-  
-  if (!taxInfo.supported) {
-    return { subtotal, tax: 0, total: subtotal, taxNote: taxInfo.reason };
-  }
-  
-  const tax = Math.round(subtotal * taxInfo.rate * 100) / 100;
-  
-  return {
-    subtotal,
-    tax,
-    total: subtotal + tax,
-    taxRate: taxInfo.percentage,
-    taxJurisdiction: taxInfo.jurisdiction,
-    taxSource: taxInfo.source
-  };
-}
+console.log('Price comparison across states:\n');
+states.forEach(state => {
+  const { rate, percentage } = getTaxRate({ state });
+  const tax = basePrice * rate;
+  const total = basePrice + tax;
+  console.log(`${state}: $${total.toFixed(2)} (${percentage})`);
+});
+
+// Output:
+// CA: $107.25 (7.25%)
+// TX: $106.25 (6.25%)
+// NY: $104.00 (4.00%)
+// FL: $106.00 (6.00%)
+// WA: $106.50 (6.50%)
+// NV: $106.85 (6.85%)
+// OR: $100.00 (0.00%)
 ```
+
+## Data Sources
+
+Tax rates are sourced from official state tax authorities:
+
+| State | Source |
+|-------|--------|
+| **CA** | [California Department of Tax and Fee Administration (CDTFA)](https://www.cdtfa.ca.gov/) |
+| **TX** | [Texas Comptroller of Public Accounts](https://comptroller.texas.gov/) |
+| **NY** | [New York State Department of Taxation and Finance](https://www.tax.ny.gov/) |
+| **FL** | [Florida Department of Revenue](https://floridarevenue.com/) |
+| **WA** | [Washington Department of Revenue](https://dor.wa.gov/) |
+| **NV** | [Nevada Department of Taxation](https://tax.nv.gov/) |
+| **OR** | [Oregon Department of Revenue](https://www.oregon.gov/dor/) |
+
+All rates effective as of **January 1, 2026**.
+
+## API Reference
+
+### `getTaxRate(request): TaxRateResponse`
+
+Look up tax rate for a location.
+
+**Parameters:**
+- `request.zip` (string, optional): ZIP code (auto-detects state)
+- `request.state` (string, optional): Two-letter state code
+- `request.city` (string, optional): City name (CA only)
+- `request.county` (string, optional): County name (CA only)
+
+**Returns:** `TaxRateResponse` object
+
+### `getStates(): string[]`
+
+Get list of supported state codes.
+
+**Returns:** Array of state codes (e.g., `["CA", "TX", "NY", ...]`)
+
+### `getSupportedStates(): string[]`
+
+Legacy alias for `getStates()`.
+
+### `getMetadata(state?): object`
+
+Get metadata about tax rate data.
+
+**Parameters:**
+- `state` (string, optional): Specific state code
+
+**Returns:** Metadata object with effective date, source, version, etc.
+
+### `getJurisdictions(state): Jurisdiction[]`
+
+Get all jurisdictions for a state.
+
+**Parameters:**
+- `state` (string): Two-letter state code
+
+**Returns:** Array of jurisdiction objects (CA has 546, others have 1)
+
+### `lookupZip(zip): ZipEntry | null`
+
+Look up city/county for a ZIP code (CA only).
+
+**Parameters:**
+- `zip` (string): 5-digit ZIP code
+
+**Returns:** Object with `city` and `county`, or `null`
 
 ## Testing
 
 ```bash
-# Run tests
+# Run all tests
 npm test
 
-# Build and test
-npm run build && npm test
+# Run specific test suites
+npm test -- --grep "California"
+npm test -- --grep "Multi-State"
 ```
+
+Tests cover:
+- 80+ California city lookups
+- All 7 supported states
+- ZIP code auto-detection
+- Edge cases and error handling
 
 ## Development
 
@@ -319,25 +425,43 @@ npm run build
 # Run tests
 npm test
 
-# Update tax rates
-npm run update-rates
+# Build + test
+npm run build && npm test
 ```
+
+## Deployment
+
+### Deploy to Vercel
+
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+**Environment:** No environment variables needed. All data is bundled.
+
+### Deploy to Other Platforms
+
+The package works anywhere Node.js runs:
+- AWS Lambda
+- Google Cloud Functions
+- Azure Functions
+- Cloudflare Workers (with polyfills)
+- Any Node.js server
 
 ## Roadmap
 
 - [x] California support (546 jurisdictions)
+- [x] Multi-state support (TX, NY, FL, WA, NV, OR)
+- [x] ZIP code auto-detection
+- [x] Hosted API (Vercel serverless)
 - [x] TypeScript types
 - [x] Zero dependencies
-- [x] Offline operation
-- [x] Test suite
-- [ ] CLI tool
-- [ ] Texas support
-- [ ] Florida support
-- [ ] New York support
+- [x] Comprehensive test suite
+- [ ] Expand TX, NY, FL with county/city data
 - [ ] All 50 states + DC
-- [ ] ZIP code boundary mapping
 - [ ] Historical rate lookups
 - [ ] Rate change notifications
+- [ ] CLI tool for local lookups
 
 ## Contributing
 
@@ -349,17 +473,23 @@ Contributions welcome! Please:
 4. Ensure all tests pass (`npm test`)
 5. Submit a pull request
 
+Ideas for contributions:
+- Add more state data (county/city level)
+- Improve ZIP code mapping
+- Add more test cases
+- Improve documentation
+
 ## Disclaimer
 
 **For informational purposes only. Not tax advice.**
 
-Tax rates are sourced from official state tax authorities and updated quarterly. While we strive for accuracy, tax rates can change, and edge cases may exist (special districts, unincorporated areas, etc.).
+Tax rates are sourced from official state tax authorities. While we strive for accuracy, tax rates can change, and edge cases may exist (special districts, unincorporated areas, exemptions, etc.).
 
 For production use:
 - Verify rates for your specific use case
 - Consider consulting a tax professional
 - Test thoroughly with your address data
-- Stay updated with quarterly rate changes
+- Stay updated with rate changes
 
 This package does NOT:
 - Provide tax filing advice
@@ -377,15 +507,12 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 Created by [mrpartner](https://github.com/mrpartnerai)
 
-Tax rate data provided by:
-- California: [CDTFA](https://www.cdtfa.ca.gov/)
-
 ## Links
 
 - [GitHub Repository](https://github.com/mrpartnerai/taxrates-us)
 - [npm Package](https://www.npmjs.com/package/taxrates-us)
 - [Issue Tracker](https://github.com/mrpartnerai/taxrates-us/issues)
-- [California CDTFA](https://www.cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm)
+- [API Endpoint](https://taxrates-us.vercel.app/api)
 
 ---
 

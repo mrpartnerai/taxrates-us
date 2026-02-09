@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Washington Department of Revenue",
+    "lastUpdated": "2026-02-08",
+    "jurisdictionCount": 1,
+    "version": "0.2.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Washington",
+      "type": "State",
+      "county": "State",
+      "rate": 0.065,
+      "ratePercent": "6.50%",
+      "districtTax": 0,
+      "notes": "State base rate. Local rates bring most areas to 8-10% total."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "washington": {
+        "location": "Washington",
+        "type": "State",
+        "county": "State",
+        "rate": 0.065,
+        "ratePercent": "6.50%",
+        "districtTax": 0,
+        "notes": "State base rate. Local rates bring most areas to 8-10% total."
+      }
+    }
+  }
+}

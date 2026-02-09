@@ -1,6 +1,9 @@
 #!/usr/bin/env ts-node
 /**
  * Parse CDTFA CSV data into structured JSON format
+ * 
+ * Input: data/SalesTaxRates1-1-26-cleaned.csv
+ * Output: src/data/ca-tax-rates.json
  */
 
 import * as fs from 'fs';
@@ -54,7 +57,6 @@ function parseCSV(filePath: string): CSVRow[] {
     
     for (let i = 0; i < line.length; i++) {
       const char = line[i];
-      
       if (char === '"') {
         inQuotes = !inQuotes;
       } else if (char === ',' && !inQuotes) {
@@ -75,19 +77,46 @@ function parseCSV(filePath: string): CSVRow[] {
   });
 }
 
+function determineType(row: CSVRow): 'City' | 'County' | 'Unincorporated Area' {
+  // The CDTFA CSV marks unincorporated areas as "County" type,
+  // but they have "Unincorporated Area" in their location name
+  if (row.Location.includes('Unincorporated Area')) {
+    return 'Unincorporated Area';
+  }
+  if (row.Type === 'County' || row.Location.includes('County')) {
+    return 'County';
+  }
+  return 'City';
+}
+
+function formatRatePercent(rate: number): string {
+  // Round to 2 decimal places for display, but support 3 for rates like 9.375%
+  const pct = rate * 100;
+  // Use 3 decimal places only if the third decimal is non-zero
+  const rounded3 = Math.round(pct * 1000) / 1000;
+  const rounded2 = Math.round(pct * 100) / 100;
+  
+  if (Math.abs(rounded3 - rounded2) > 0.0001) {
+    // Has meaningful third decimal (like 9.375%)
+    return `${rounded3.toFixed(3)}%`;
+  }
+  return `${rounded2.toFixed(2)}%`;
+}
+
 function buildTaxRateData(csvData: CSVRow[]): TaxRateData {
   const jurisdictions: Jurisdiction[] = csvData.map(row => {
     const rate = parseFloat(row.Rate);
     const districtTax = Math.round((rate - CA_STATE_BASE_RATE) * 10000) / 10000;
+    const type = determineType(row);
     
     return {
       location: row.Location,
-      type: row.Type as any,
+      type,
       county: row.County,
-      rate: rate,
-      ratePercent: `${(rate * 100).toFixed(2)}%`,
-      districtTax: districtTax,
-      notes: row.Notes || null
+      rate,
+      ratePercent: formatRatePercent(rate),
+      districtTax: Math.max(0, districtTax), // Ensure non-negative
+      notes: row.Notes || null,
     };
   });
   
@@ -99,9 +128,18 @@ function buildTaxRateData(csvData: CSVRow[]): TaxRateData {
     
     if (jurisdiction.type === 'County') {
       byCounty[key] = jurisdiction;
-      // Also allow lookup by "County Name County" format
-      const countyKey = `${jurisdiction.location.toLowerCase()} county`;
-      byCounty[countyKey] = jurisdiction;
+      // Also index by just the county name (without "County" suffix)
+      // e.g., "alameda county" → also store as "alameda"
+      if (key.endsWith(' county')) {
+        const shortKey = key.replace(/ county$/, '');
+        // Only if there's no city with that name
+        if (!jurisdictions.some(j => j.type === 'City' && j.location.toLowerCase() === shortKey)) {
+          byCounty[shortKey] = jurisdiction;
+        }
+      }
+    } else if (jurisdiction.type === 'Unincorporated Area') {
+      // Store under their full name in county lookup
+      byCounty[key] = jurisdiction;
     } else {
       byCity[key] = jurisdiction;
     }
@@ -113,13 +151,13 @@ function buildTaxRateData(csvData: CSVRow[]): TaxRateData {
       source: 'California Department of Tax and Fee Administration (CDTFA)',
       lastUpdated: new Date().toISOString().split('T')[0],
       jurisdictionCount: jurisdictions.length,
-      version: '0.1.0'
+      version: '0.1.0',
     },
     jurisdictions,
     lookup: {
       byCity,
-      byCounty
-    }
+      byCounty,
+    },
   };
 }
 
@@ -143,10 +181,37 @@ function main() {
   console.log('💾 Writing JSON file...');
   fs.writeFileSync(outputPath, JSON.stringify(taxRateData, null, 2), 'utf-8');
   
+  // Stats
+  const types = taxRateData.jurisdictions.reduce((acc: Record<string, number>, j) => {
+    acc[j.type] = (acc[j.type] || 0) + 1;
+    return acc;
+  }, {});
+  
   console.log(`✅ Successfully created ${outputPath}`);
   console.log(`   Jurisdictions: ${taxRateData.metadata.jurisdictionCount}`);
+  console.log(`   Types: ${JSON.stringify(types)}`);
   console.log(`   Cities in index: ${Object.keys(taxRateData.lookup.byCity).length}`);
   console.log(`   Counties in index: ${Object.keys(taxRateData.lookup.byCounty).length}`);
+  
+  // Validate: spot-check some known rates
+  const checks = [
+    { name: 'Sacramento', lookup: taxRateData.lookup.byCity['sacramento'], expected: 0.0875 },
+    { name: 'Los Angeles', lookup: taxRateData.lookup.byCity['los angeles'], expected: 0.095 },
+    { name: 'Lancaster', lookup: taxRateData.lookup.byCity['lancaster'], expected: 0.1125 },
+    { name: 'Alpine County', lookup: taxRateData.lookup.byCounty['alpine county'], expected: 0.0725 },
+  ];
+  
+  let allPassed = true;
+  for (const check of checks) {
+    if (!check.lookup || check.lookup.rate !== check.expected) {
+      console.error(`❌ Validation failed: ${check.name} expected ${check.expected}, got ${check.lookup?.rate}`);
+      allPassed = false;
+    }
+  }
+  
+  if (allPassed) {
+    console.log('✅ Spot-check validation passed');
+  }
 }
 
 main();

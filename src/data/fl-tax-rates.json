@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Florida Department of Revenue",
+    "lastUpdated": "2026-02-08",
+    "jurisdictionCount": 1,
+    "version": "0.2.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Florida",
+      "type": "State",
+      "county": "State",
+      "rate": 0.06,
+      "ratePercent": "6.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Counties may add up to 1.5% discretionary sales surtax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "florida": {
+        "location": "Florida",
+        "type": "State",
+        "county": "State",
+        "rate": 0.06,
+        "ratePercent": "6.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Counties may add up to 1.5% discretionary sales surtax."
+      }
+    }
+  }
+}
