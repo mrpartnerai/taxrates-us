@@ -23,7 +23,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   
   return res.status(200).json({
     service: 'taxrates-us API',
-    version: '0.2.0',
+    version: '0.3.0',
     endpoints: {
       rate: '/api/rate?zip=90210',
       states: '/api/states',

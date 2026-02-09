@@ -124,6 +124,15 @@ export function getTaxRate(request: TaxRateRequest | { zip: string; state?: stri
     return getCaliforniaRate(request as TaxRateRequest);
   }
   
+  // Try city lookup for other states
+  if ('city' in request && request.city) {
+    const cityKey = request.city.toLowerCase().trim();
+    const cityJurisdiction = data.lookup.byCity[cityKey];
+    if (cityJurisdiction) {
+      return createSimpleResponse(cityJurisdiction, state, data);
+    }
+  }
+  
   // For other states, return base state rate
   return getStateBaseRate(state, data);
 }

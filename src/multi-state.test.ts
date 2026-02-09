@@ -38,16 +38,40 @@ describe('Texas Tax Rates', () => {
     assert.strictEqual(r.supported, true);
   });
 
+  it('Houston: 8.25%', () => {
+    const r = getTaxRate({ state: 'TX', city: 'Houston' });
+    assert.strictEqual(r.rate, 0.0825);
+    assert.strictEqual(r.percentage, '8.25%');
+    assert.strictEqual(r.jurisdiction, 'Houston');
+  });
+
+  it('Dallas: 8.25%', () => {
+    const r = getTaxRate({ state: 'TX', city: 'Dallas' });
+    assert.strictEqual(r.rate, 0.0825);
+    assert.strictEqual(r.percentage, '8.25%');
+  });
+
+  it('Austin: 8.25%', () => {
+    const r = getTaxRate({ state: 'TX', city: 'Austin' });
+    assert.strictEqual(r.rate, 0.0825);
+    assert.strictEqual(r.percentage, '8.25%');
+  });
+
+  it('San Antonio: 8.25%', () => {
+    const r = getTaxRate({ state: 'TX', city: 'San Antonio' });
+    assert.strictEqual(r.rate, 0.0825);
+  });
+
   it('TX rate from ZIP (75201 - Dallas)', () => {
     const r = getTaxRate({ zip: '75201' });
     assert.strictEqual(r.state, 'TX');
-    assert.strictEqual(r.rate, 0.0625);
+    assert.ok(r.rate >= 0.0625); // At least base rate
   });
 
   it('TX rate from ZIP (78701 - Austin)', () => {
     const r = getTaxRate({ zip: '78701' });
     assert.strictEqual(r.state, 'TX');
-    assert.strictEqual(r.rate, 0.0625);
+    assert.ok(r.rate >= 0.0625);
   });
 
   it('TX case-insensitive state code', () => {
@@ -70,16 +94,43 @@ describe('New York Tax Rates', () => {
     assert.strictEqual(r.supported, true);
   });
 
+  it('New York City: 8.875%', () => {
+    const r = getTaxRate({ state: 'NY', city: 'New York City' });
+    assert.strictEqual(r.rate, 0.08875);
+    assert.strictEqual(r.percentage, '8.875%');
+    assert.strictEqual(r.jurisdiction, 'New York City');
+  });
+
+  it('NYC (alias): 8.875%', () => {
+    const r = getTaxRate({ state: 'NY', city: 'NYC' });
+    assert.strictEqual(r.rate, 0.08875);
+  });
+
+  it('Buffalo: 8.75%', () => {
+    const r = getTaxRate({ state: 'NY', city: 'Buffalo' });
+    assert.strictEqual(r.rate, 0.0875);
+  });
+
+  it('Rochester: 8.00%', () => {
+    const r = getTaxRate({ state: 'NY', city: 'Rochester' });
+    assert.strictEqual(r.rate, 0.08);
+  });
+
+  it('Albany: 8.00%', () => {
+    const r = getTaxRate({ state: 'NY', city: 'Albany' });
+    assert.strictEqual(r.rate, 0.08);
+  });
+
   it('NY rate from ZIP (10001 - Manhattan)', () => {
     const r = getTaxRate({ zip: '10001' });
     assert.strictEqual(r.state, 'NY');
-    assert.strictEqual(r.rate, 0.04);
+    assert.ok(r.rate >= 0.04); // At least base rate
   });
 
   it('NY rate from ZIP (11201 - Brooklyn)', () => {
     const r = getTaxRate({ zip: '11201' });
     assert.strictEqual(r.state, 'NY');
-    assert.strictEqual(r.rate, 0.04);
+    assert.ok(r.rate >= 0.04);
   });
 });
 

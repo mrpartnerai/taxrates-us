@@ -3,7 +3,7 @@
     "effectiveDate": "2026-01-01",
     "source": "New York State Department of Taxation and Finance",
     "lastUpdated": "2026-02-08",
-    "jurisdictionCount": 1,
+    "jurisdictionCount": 7,
     "version": "0.2.0"
   },
   "jurisdictions": [
@@ -15,10 +15,137 @@
       "ratePercent": "4.00%",
       "districtTax": 0,
       "notes": "State base rate. Local jurisdictions may add additional tax (NYC: 8.875% total)."
+    },
+    {
+      "location": "New York City",
+      "type": "City",
+      "county": "New York",
+      "rate": 0.08875,
+      "ratePercent": "8.875%",
+      "districtTax": 0.04875,
+      "notes": "Includes 4% state + 4.5% city + 0.375% MTA (Metropolitan Commuter Transportation District)"
+    },
+    {
+      "location": "Buffalo",
+      "type": "City",
+      "county": "Erie",
+      "rate": 0.0875,
+      "ratePercent": "8.75%",
+      "districtTax": 0.0475,
+      "notes": "Includes 4% state + 4.75% local"
+    },
+    {
+      "location": "Rochester",
+      "type": "City",
+      "county": "Monroe",
+      "rate": 0.08,
+      "ratePercent": "8.00%",
+      "districtTax": 0.04,
+      "notes": "Includes 4% state + 4% local"
+    },
+    {
+      "location": "Yonkers",
+      "type": "City",
+      "county": "Westchester",
+      "rate": 0.08375,
+      "ratePercent": "8.375%",
+      "districtTax": 0.04375,
+      "notes": "Includes 4% state + 4% county + 0.375% MTA"
+    },
+    {
+      "location": "Syracuse",
+      "type": "City",
+      "county": "Onondaga",
+      "rate": 0.08,
+      "ratePercent": "8.00%",
+      "districtTax": 0.04,
+      "notes": "Includes 4% state + 4% local"
+    },
+    {
+      "location": "Albany",
+      "type": "City",
+      "county": "Albany",
+      "rate": 0.08,
+      "ratePercent": "8.00%",
+      "districtTax": 0.04,
+      "notes": "Includes 4% state + 4% local"
     }
   ],
   "lookup": {
-    "byCity": {},
+    "byCity": {
+      "new york city": {
+        "location": "New York City",
+        "type": "City",
+        "county": "New York",
+        "rate": 0.08875,
+        "ratePercent": "8.875%",
+        "districtTax": 0.04875,
+        "notes": "Includes 4% state + 4.5% city + 0.375% MTA (Metropolitan Commuter Transportation District)"
+      },
+      "new york": {
+        "location": "New York City",
+        "type": "City",
+        "county": "New York",
+        "rate": 0.08875,
+        "ratePercent": "8.875%",
+        "districtTax": 0.04875,
+        "notes": "Includes 4% state + 4.5% city + 0.375% MTA (Metropolitan Commuter Transportation District)"
+      },
+      "nyc": {
+        "location": "New York City",
+        "type": "City",
+        "county": "New York",
+        "rate": 0.08875,
+        "ratePercent": "8.875%",
+        "districtTax": 0.04875,
+        "notes": "Includes 4% state + 4.5% city + 0.375% MTA (Metropolitan Commuter Transportation District)"
+      },
+      "buffalo": {
+        "location": "Buffalo",
+        "type": "City",
+        "county": "Erie",
+        "rate": 0.0875,
+        "ratePercent": "8.75%",
+        "districtTax": 0.0475,
+        "notes": "Includes 4% state + 4.75% local"
+      },
+      "rochester": {
+        "location": "Rochester",
+        "type": "City",
+        "county": "Monroe",
+        "rate": 0.08,
+        "ratePercent": "8.00%",
+        "districtTax": 0.04,
+        "notes": "Includes 4% state + 4% local"
+      },
+      "yonkers": {
+        "location": "Yonkers",
+        "type": "City",
+        "county": "Westchester",
+        "rate": 0.08375,
+        "ratePercent": "8.375%",
+        "districtTax": 0.04375,
+        "notes": "Includes 4% state + 4% county + 0.375% MTA"
+      },
+      "syracuse": {
+        "location": "Syracuse",
+        "type": "City",
+        "county": "Onondaga",
+        "rate": 0.08,
+        "ratePercent": "8.00%",
+        "districtTax": 0.04,
+        "notes": "Includes 4% state + 4% local"
+      },
+      "albany": {
+        "location": "Albany",
+        "type": "City",
+        "county": "Albany",
+        "rate": 0.08,
+        "ratePercent": "8.00%",
+        "districtTax": 0.04,
+        "notes": "Includes 4% state + 4% local"
+      }
+    },
     "byCounty": {},
     "byState": {
       "new york": {

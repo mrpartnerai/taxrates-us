@@ -63,14 +63,14 @@ curl "https://taxrates-us.vercel.app/api/states"
 | State | Code | Base Rate | Jurisdictions | Details |
 |-------|------|-----------|---------------|---------|
 | **California** | CA | 7.25% | 546 | Cities, counties, unincorporated areas |
-| **Texas** | TX | 6.25% | Base only | Local rates vary |
-| **New York** | NY | 4.00% | Base only | NYC: 8.875% total |
+| **Texas** | TX | 6.25% | 9 | Major cities (Houston, Dallas, Austin, etc.) |
+| **New York** | NY | 4.00% | 7 | Major cities (NYC, Buffalo, Rochester, etc.) |
 | **Florida** | FL | 6.00% | Base only | County surtax varies |
 | **Washington** | WA | 6.50% | Base only | Local rates 8-10% total |
 | **Nevada** | NV | 6.85% | Base only | County add-ons vary |
 | **Oregon** | OR | 0.00% | Base only | No sales tax |
 
-**California** has the most detailed coverage with 546 jurisdictions. Other states return base state rates.
+**California** has the most detailed coverage with 546 jurisdictions. **Texas** and **New York** include major city rates. Other states return base state rates.
 
 ## Usage
 
@@ -253,10 +253,19 @@ curl "https://taxrates-us.vercel.app/api"
 ### API Features
 
 - **CORS enabled** — Use from any domain
-- **Rate limiting placeholder** — Add your own rate limiting logic
+- **Rate limiting** — 10 requests/minute, 100 requests/hour per IP
+- **Rate limit headers** — `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset`
 - **Vercel Edge Network** — Fast global response times
 - **Serverless** — Zero infrastructure management
 - **Free tier** — Generous Vercel free tier limits
+
+### Rate Limiting
+
+The hosted API implements in-memory rate limiting:
+- 10 requests per minute per IP
+- 100 requests per hour per IP
+- Responses include rate limit headers
+- Returns `429 Too Many Requests` when exceeded
 
 ### Deploy Your Own API
 

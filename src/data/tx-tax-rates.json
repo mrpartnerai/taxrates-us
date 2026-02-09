@@ -3,7 +3,7 @@
     "effectiveDate": "2026-01-01",
     "source": "Texas Comptroller of Public Accounts",
     "lastUpdated": "2026-02-08",
-    "jurisdictionCount": 1,
+    "jurisdictionCount": 9,
     "version": "0.2.0"
   },
   "jurisdictions": [
@@ -15,10 +15,155 @@
       "ratePercent": "6.25%",
       "districtTax": 0,
       "notes": "State base rate. Local jurisdictions may add up to 2% additional tax."
+    },
+    {
+      "location": "Houston",
+      "type": "City",
+      "county": "Harris",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "Dallas",
+      "type": "City",
+      "county": "Dallas",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "San Antonio",
+      "type": "City",
+      "county": "Bexar",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "Austin",
+      "type": "City",
+      "county": "Travis",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "Fort Worth",
+      "type": "City",
+      "county": "Tarrant",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "El Paso",
+      "type": "City",
+      "county": "El Paso",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "Plano",
+      "type": "City",
+      "county": "Collin",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+    },
+    {
+      "location": "Corpus Christi",
+      "type": "City",
+      "county": "Nueces",
+      "rate": 0.0825,
+      "ratePercent": "8.25%",
+      "districtTax": 0.02,
+      "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
     }
   ],
   "lookup": {
-    "byCity": {},
+    "byCity": {
+      "houston": {
+        "location": "Houston",
+        "type": "City",
+        "county": "Harris",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "dallas": {
+        "location": "Dallas",
+        "type": "City",
+        "county": "Dallas",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "san antonio": {
+        "location": "San Antonio",
+        "type": "City",
+        "county": "Bexar",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "austin": {
+        "location": "Austin",
+        "type": "City",
+        "county": "Travis",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "fort worth": {
+        "location": "Fort Worth",
+        "type": "City",
+        "county": "Tarrant",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "el paso": {
+        "location": "El Paso",
+        "type": "City",
+        "county": "El Paso",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "plano": {
+        "location": "Plano",
+        "type": "City",
+        "county": "Collin",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      },
+      "corpus christi": {
+        "location": "Corpus Christi",
+        "type": "City",
+        "county": "Nueces",
+        "rate": 0.0825,
+        "ratePercent": "8.25%",
+        "districtTax": 0.02,
+        "notes": "Includes 6.25% state + 2% local (maximum combined rate)"
+      }
+    },
     "byCounty": {},
     "byState": {
       "texas": {
