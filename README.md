@@ -7,6 +7,8 @@
 
 Open-source npm package and hosted API for looking up sales tax rates. Self-hosted with bundled rate data, zero external API dependencies, and works completely offline.
 
+🌐 **[View Landing Page](https://taxrates-us.vercel.app)** | 📦 **[npm Package](https://www.npmjs.com/package/taxrates-us)** | 🔗 **[API Docs](https://taxrates-us.vercel.app/api)**
+
 ## Features
 
 ✅ **Zero dependencies** — Pure TypeScript, no external runtime deps  
