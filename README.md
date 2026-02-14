@@ -9,6 +9,22 @@ Open-source npm package and hosted API for looking up sales tax rates. Self-host
 
 🌐 **[View Landing Page](https://taxrates-us.vercel.app)** | 📦 **[npm Package](https://www.npmjs.com/package/taxrates-us)** | 🔗 **[API Docs](https://taxrates-us.vercel.app/api)**
 
+---
+
+## ⚠️ Important Disclaimer
+
+**This tool provides tax rate information for informational purposes only. It is NOT tax advice.**
+
+- **Always verify rates** with official state and local tax authorities before making tax decisions
+- **Tax rates change** — rates may be outdated or incomplete
+- **Edge cases exist** — special tax districts, exemptions, and local variations may not be reflected
+- **Not for legal compliance** — consult a tax professional for production use cases
+- **Use at your own risk** — the authors are not liable for incorrect calculations or compliance issues
+
+For official rates, consult your state's Department of Revenue or tax authority. See [TERMS.md](TERMS.md) for full terms of use.
+
+---
+
 ## Features
 
 ✅ **Zero dependencies** — Pure TypeScript, no external runtime deps  
@@ -136,6 +152,7 @@ interface TaxRateResponse {
   supported: boolean;        // true for supported states
   lookupMethod?: string;     // "zip", "city", "county", "state-default"
   reason?: string;           // Explanation for unsupported states
+  disclaimer: string;        // Legal disclaimer (always present)
 }
 ```
 
@@ -219,7 +236,8 @@ curl "https://taxrates-us.vercel.app/api/rate?zip=90210&state=CA"
   "source": "California Department of Tax and Fee Administration (CDTFA)",
   "effectiveDate": "2026-01-01",
   "supported": true,
-  "lookupMethod": "city"
+  "lookupMethod": "city",
+  "disclaimer": "This data is provided for informational purposes only and is not tax advice. Tax rates may change. Always verify rates with official state/local tax authorities before making tax decisions. Use at your own risk."
 }
 ```
 
@@ -490,25 +508,53 @@ Ideas for contributions:
 - Add more test cases
 - Improve documentation
 
-## Disclaimer
+## ⚠️ Disclaimer & Terms of Use
 
-**For informational purposes only. Not tax advice.**
+**FOR INFORMATIONAL PURPOSES ONLY — NOT TAX OR LEGAL ADVICE**
 
-Tax rates are sourced from official state tax authorities. While we strive for accuracy, tax rates can change, and edge cases may exist (special districts, unincorporated areas, exemptions, etc.).
+This software provides tax rate lookups as a convenience tool. By using this package or API, you acknowledge and agree:
 
-For production use:
-- Verify rates for your specific use case
-- Consider consulting a tax professional
-- Test thoroughly with your address data
-- Stay updated with rate changes
+### What This Tool IS
+- A reference tool for approximate sales tax rates
+- Based on publicly available data from state tax authorities
+- Provided "as-is" without warranties of any kind
+- Open source software you can audit and verify
 
+### What This Tool IS NOT
+- **Not tax advice** — we are not tax professionals or advisors
+- **Not guaranteed accurate** — rates change, data may be incomplete or outdated
+- **Not for legal compliance** — not suitable as sole basis for tax collection/remittance
+- **Not comprehensive** — does not cover all jurisdictions, exemptions, or special cases
+
+### Your Responsibilities
+- **Verify all rates** with official state/local tax authorities before use
+- **Consult tax professionals** for production use cases or compliance questions
+- **Test thoroughly** with your specific use case and address data
+- **Monitor rate changes** — tax rates can change quarterly or more frequently
+- **Understand limitations** — special districts, exemptions, and local variations may not be reflected
+
+### Limitations & Exclusions
 This package does NOT:
-- Provide tax filing advice
-- Handle tax exemptions (groceries, prescription drugs, etc.)
-- Calculate use tax or other tax types
-- Guarantee legal compliance
+- Handle tax exemptions (groceries, prescription drugs, clothing, etc.)
+- Calculate use tax, excise tax, or other tax types
+- Cover all 50 states or all jurisdictions within supported states
+- Account for all special tax districts or temporary rate changes
+- Guarantee legal compliance or fitness for any particular purpose
 
-**Use at your own risk.** The authors are not liable for incorrect tax calculations or compliance issues.
+### No Warranty
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM USE OF THIS SOFTWARE.
+
+### Official Sources
+For official, legally binding tax rates, consult:
+- **California:** [CDTFA](https://www.cdtfa.ca.gov/)
+- **Texas:** [Comptroller](https://comptroller.texas.gov/)
+- **New York:** [Tax Department](https://www.tax.ny.gov/)
+- **Florida:** [Dept of Revenue](https://floridarevenue.com/)
+- **Washington:** [Dept of Revenue](https://dor.wa.gov/)
+- **Nevada:** [Dept of Taxation](https://tax.nv.gov/)
+- **Oregon:** [Dept of Revenue](https://www.oregon.gov/dor/)
+
+**Use at your own risk.** See [TERMS.md](TERMS.md) for complete terms of use.
 
 ## License
 
@@ -528,3 +574,4 @@ Created by [mrpartner](https://github.com/mrpartnerai)
 ---
 
 **Made with ❤️ for developers who need accurate tax rates without the hassle**
+# Test
