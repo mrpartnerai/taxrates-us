@@ -1,17 +1,10 @@
 {
-  "framework": null,
+  "framework": "nextjs",
   "buildCommand": "npm run build",
-  "outputDirectory": ".",
   "functions": {
     "api/**/*.ts": {
       "memory": 256,
       "maxDuration": 10
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ]
+  }
 }

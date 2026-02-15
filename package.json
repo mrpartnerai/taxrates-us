@@ -1,13 +1,17 @@
 {
   "name": "taxrates-us",
-  "version": "0.3.0",
-  "description": "Accurate US sales tax rate lookups - CA, TX, NY, FL, WA, NV, OR",
+  "version": "0.4.0",
+  "description": "Accurate US sales tax rate lookups - All 50 states + DC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "dev": "next dev",
+    "build": "next build && npm run build:package",
+    "start": "next start",
+    "build:package": "tsc -p tsconfig.package.json",
     "test": "node --test dist/**/*.test.js",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run build:package && npm test",
+    "lint": "eslint"
   },
   "keywords": [
     "tax",
@@ -32,9 +36,21 @@
     "README.md",
     "LICENSE"
   ],
+  "dependencies": {
+    "lucide-react": "^0.563.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^22.0.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@vercel/node": "^3.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
     "typescript": "^5.6.0"
   },
   "engines": {

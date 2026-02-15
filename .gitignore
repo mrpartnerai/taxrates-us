@@ -5,3 +5,9 @@ dist/
 .env
 .vscode/
 *.tsbuildinfo
+staged-data/
+.vercel
+.next/
+mcp/
+landing/node_modules/
+landing/.next/
