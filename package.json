@@ -9,7 +9,9 @@
     "build": "next build && npm run build:package",
     "start": "next start",
     "build:package": "tsc -p tsconfig.package.json",
-    "test": "node --test dist/**/*.test.js",
+    "test": "tsx security-tests/test-bad-data.ts && node --test dist/**/*.test.js",
+    "test:security": "tsx security-tests/test-bad-data.ts",
+    "validate:data": "tsx scripts/auto-update/validate-staged.ts",
     "prepublishOnly": "npm run build:package && npm test",
     "lint": "eslint"
   },

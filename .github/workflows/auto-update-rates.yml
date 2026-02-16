@@ -1,0 +1,171 @@
+name: Auto-Update Tax Rates
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC (10 PM PST / 11 PM PDT)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      - name: Scrape latest rates
+        run: tsx scripts/auto-update/scrape-rates.ts
+
+      - name: Validate scraped data (SECURITY)
+        run: |
+          set +e
+          tsx scripts/auto-update/validate-staged.ts
+          EXIT_CODE=$?
+          set -e
+          
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "✅ Validation passed - proceeding with update"
+          elif [ $EXIT_CODE -eq 2 ]; then
+            echo "⚠️  Validation flagged for manual review"
+            # Continue to allow PR creation for manual review
+          else
+            echo "❌ Validation failed - stopping workflow"
+            exit 1
+          fi
+
+      - name: Diff against current data
+        id: diff
+        run: |
+          set +e
+          tsx scripts/auto-update/diff-rates.ts staged-data
+          EXIT_CODE=$?
+          set -e
+          
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "result=no-changes-or-safe" >> $GITHUB_OUTPUT
+          elif [ $EXIT_CODE -eq 2 ]; then
+            echo "result=needs-review" >> $GITHUB_OUTPUT
+          else
+            echo "result=error" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Read diff report
+        id: report
+        if: always()
+        run: |
+          if [ -f staged-data/diff-report.json ]; then
+            SUMMARY=$(cat staged-data/diff-report.json | python3 -c "import sys,json; print(json.load(sys.stdin)['summary'])")
+            CHANGED=$(cat staged-data/diff-report.json | python3 -c "import sys,json; print(json.load(sys.stdin)['changedJurisdictions'])")
+            echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
+            echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+          fi
+
+      # --- AUTO-DEPLOY PATH (small changes) ---
+      - name: Apply changes (auto-deploy)
+        if: steps.diff.outputs.result == 'no-changes-or-safe' && steps.report.outputs.changed != '0'
+        run: tsx scripts/auto-update/apply-changes.ts
+
+      - name: Build & Test
+        if: steps.diff.outputs.result == 'no-changes-or-safe' && steps.report.outputs.changed != '0'
+        run: |
+          npm run build
+          npm test
+
+      - name: Commit & Push (auto-deploy)
+        if: steps.diff.outputs.result == 'no-changes-or-safe' && steps.report.outputs.changed != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/ CHANGELOG.md
+          git commit -m "auto-update: ${{ steps.report.outputs.summary }}" || echo "Nothing to commit"
+          git push
+
+      # --- REVIEW PATH (large changes) ---
+      - name: Create review PR
+        if: steps.diff.outputs.result == 'needs-review'
+        run: |
+          # Apply changes to a branch
+          BRANCH="auto-update/$(date +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          
+          tsx scripts/auto-update/apply-changes.ts || true
+          # Force-apply even if not auto-deployable (for the PR)
+          for f in staged-data/*-tax-rates.json; do
+            basename=$(basename "$f")
+            cp "$f" "src/data/$basename"
+          done
+          
+          npm run build || true
+          
+          git add src/data/ CHANGELOG.md dist/ || true
+          git commit -m "auto-update: ${{ steps.report.outputs.summary }}" || echo "Nothing to commit"
+          git push origin "$BRANCH" --force
+          
+          # Create PR with diff report
+          BODY=$(cat staged-data/diff-report.json | python3 -c "
+          import sys, json
+          r = json.load(sys.stdin)
+          lines = ['## ⚠️ Tax Rate Update Needs Review', '']
+          lines.append(f\"**{r['changedJurisdictions']}** jurisdictions changed ({r['changePercent']}%)\")
+          lines.append('')
+          if r['structuralChanges']:
+            lines.append('### Structural Changes')
+            for s in r['structuralChanges']:
+              lines.append(f'- {s}')
+            lines.append('')
+          if r['rateChanges']:
+            lines.append('### Rate Changes (first 20)')
+            for c in r['rateChanges'][:20]:
+              lines.append(f\"- **{c['state']} {c['location']}**: {c['oldRate']*100:.2f}% → {c['newRate']*100:.2f}%\")
+            if len(r['rateChanges']) > 20:
+              lines.append(f'- ... and {len(r[\"rateChanges\"]) - 20} more')
+            lines.append('')
+          if r['newJurisdictions']:
+            lines.append(f\"### {len(r['newJurisdictions'])} New Jurisdictions\")
+            for n in r['newJurisdictions'][:10]:
+              lines.append(f'- {n}')
+            lines.append('')
+          if r['removedJurisdictions']:
+            lines.append(f\"### {len(r['removedJurisdictions'])} Removed Jurisdictions\")
+            for n in r['removedJurisdictions'][:10]:
+              lines.append(f'- {n}')
+          print('\n'.join(lines))
+          ")
+          
+          gh pr create \
+            --title "⚠️ Tax Rate Update: ${{ steps.report.outputs.summary }}" \
+            --body "$BODY" \
+            --label "auto-update,needs-review" \
+            --base main \
+            --head "$BRANCH" || echo "PR may already exist"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # --- Upload artifacts for debugging ---
+      - name: Upload diff report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diff-report
+          path: staged-data/
+          retention-days: 30
