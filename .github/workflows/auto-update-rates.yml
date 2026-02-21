@@ -34,6 +34,8 @@ jobs:
         run: tsx scripts/auto-update/scrape-rates.ts
 
       - name: Validate scraped data (SECURITY)
+        env:
+          VALIDATION_ALERT_WEBHOOK: ${{ secrets.VALIDATION_ALERT_WEBHOOK }}
         run: |
           set +e
           tsx scripts/auto-update/validate-staged.ts

@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Utah State Tax Commission",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Utah",
+      "type": "State",
+      "county": "State",
+      "rate": 0.0485,
+      "ratePercent": "4.85%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions add 1% to 7.5% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "utah": {
+        "location": "Utah",
+        "type": "State",
+        "county": "State",
+        "rate": 0.0485,
+        "ratePercent": "4.85%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions add 1% to 7.5% additional tax."
+      }
+    }
+  }
+}

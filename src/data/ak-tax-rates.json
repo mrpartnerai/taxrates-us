@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Alaska Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Alaska",
+      "type": "State",
+      "county": "State",
+      "rate": 0,
+      "ratePercent": "0.00%",
+      "districtTax": 0,
+      "notes": "No state sales tax. Some local jurisdictions impose local sales taxes up to 9.5%."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "alaska": {
+        "location": "Alaska",
+        "type": "State",
+        "county": "State",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": "No state sales tax. Some local jurisdictions impose local sales taxes up to 9.5%."
+      }
+    }
+  }
+}

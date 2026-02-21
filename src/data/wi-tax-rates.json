@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Wisconsin Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Wisconsin",
+      "type": "State",
+      "county": "State",
+      "rate": 0.05,
+      "ratePercent": "5.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 1.75% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "wisconsin": {
+        "location": "Wisconsin",
+        "type": "State",
+        "county": "State",
+        "rate": 0.05,
+        "ratePercent": "5.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 1.75% additional tax."
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Idaho State Tax Commission",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Idaho",
+      "type": "State",
+      "county": "State",
+      "rate": 0.06,
+      "ratePercent": "6.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 3% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "idaho": {
+        "location": "Idaho",
+        "type": "State",
+        "county": "State",
+        "rate": 0.06,
+        "ratePercent": "6.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 3% additional tax."
+      }
+    }
+  }
+}

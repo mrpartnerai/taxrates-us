@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Arizona Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Arizona",
+      "type": "State",
+      "county": "State",
+      "rate": 0.056,
+      "ratePercent": "5.60%",
+      "districtTax": 0,
+      "notes": "State Transaction Privilege Tax (TPT) base rate. Local jurisdictions may add additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "arizona": {
+        "location": "Arizona",
+        "type": "State",
+        "county": "State",
+        "rate": 0.056,
+        "ratePercent": "5.60%",
+        "districtTax": 0,
+        "notes": "State Transaction Privilege Tax (TPT) base rate. Local jurisdictions may add additional tax."
+      }
+    }
+  }
+}

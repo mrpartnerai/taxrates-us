@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Vermont Department of Taxes",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Vermont",
+      "type": "State",
+      "county": "State",
+      "rate": 0.06,
+      "ratePercent": "6.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 1% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "vermont": {
+        "location": "Vermont",
+        "type": "State",
+        "county": "State",
+        "rate": 0.06,
+        "ratePercent": "6.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 1% additional tax."
+      }
+    }
+  }
+}

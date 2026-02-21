@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "New Hampshire Department of Revenue Administration",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "New Hampshire",
+      "type": "State",
+      "county": "State",
+      "rate": 0,
+      "ratePercent": "0.00%",
+      "districtTax": 0,
+      "notes": "No sales tax. New Hampshire has no state or local general sales tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "new hampshire": {
+        "location": "New Hampshire",
+        "type": "State",
+        "county": "State",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": "No sales tax. New Hampshire has no state or local general sales tax."
+      }
+    }
+  }
+}

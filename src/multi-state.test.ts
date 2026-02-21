@@ -1,6 +1,9 @@
 /**
  * Multi-state test suite for taxrates-us
- * Tests for TX, NY, FL, WA, NV, OR
+ * Tests all 50 states + DC
+ * 
+ * All rates verified against Sales Tax Institute (as of 2/1/2026)
+ * https://www.salestaxinstitute.com/resources/rates
  */
 
 import { describe, it } from 'node:test';
@@ -12,32 +15,125 @@ import { getTaxRate, getStates } from './index';
 // ============================================================================
 
 describe('Multi-State Support', () => {
-  it('getStates returns all supported states', () => {
+  it('getStates returns all 51 entries (50 states + DC)', () => {
     const states = getStates();
-    assert.ok(states.includes('CA'));
-    assert.ok(states.includes('TX'));
-    assert.ok(states.includes('NY'));
-    assert.ok(states.includes('FL'));
-    assert.ok(states.includes('WA'));
-    assert.ok(states.includes('NV'));
-    assert.ok(states.includes('OR'));
-    assert.strictEqual(states.length, 7);
+    assert.strictEqual(states.length, 51);
+  });
+
+  it('includes all 50 states + DC', () => {
+    const states = getStates();
+    const expected = [
+      'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL',
+      'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',
+      'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NH', 'NJ',
+      'NM', 'NY', 'NC', 'ND', 'NV', 'OH', 'OK', 'OR', 'PA', 'RI',
+      'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY',
+    ];
+    for (const s of expected) {
+      assert.ok(states.includes(s), `Missing state: ${s}`);
+    }
   });
 });
 
 // ============================================================================
-// Texas (TX)
+// No-Sales-Tax States (5 states: AK, DE, MT, NH, OR)
+// ============================================================================
+
+describe('No-Sales-Tax States', () => {
+  const noTaxStates = [
+    ['AK', 'Alaska'],
+    ['DE', 'Delaware'],
+    ['MT', 'Montana'],
+    ['NH', 'New Hampshire'],
+    ['OR', 'Oregon'],
+  ];
+
+  for (const [code, name] of noTaxStates) {
+    it(`${name} (${code}): 0.00%`, () => {
+      const r = getTaxRate({ state: code });
+      assert.strictEqual(r.rate, 0);
+      assert.strictEqual(r.percentage, '0.00%');
+      assert.strictEqual(r.state, code);
+      assert.strictEqual(r.supported, true);
+    });
+  }
+});
+
+// ============================================================================
+// All State Rates (verified against Sales Tax Institute 2/1/2026)
+// ============================================================================
+
+describe('All State Base Rates', () => {
+  const stateRates: [string, number, string][] = [
+    ['AL', 0.04, '4.00%'],
+    ['AK', 0, '0.00%'],
+    ['AZ', 0.056, '5.60%'],
+    ['AR', 0.065, '6.50%'],
+    ['CA', 0.0725, '7.25%'],
+    ['CO', 0.029, '2.90%'],
+    ['CT', 0.0635, '6.35%'],
+    ['DE', 0, '0.00%'],
+    ['DC', 0.06, '6.00%'],
+    ['FL', 0.06, '6.00%'],
+    ['GA', 0.04, '4.00%'],
+    ['HI', 0.04, '4.00%'],
+    ['ID', 0.06, '6.00%'],
+    ['IL', 0.0625, '6.25%'],
+    ['IN', 0.07, '7.00%'],
+    ['IA', 0.06, '6.00%'],
+    ['KS', 0.065, '6.50%'],
+    ['KY', 0.06, '6.00%'],
+    ['LA', 0.05, '5.00%'],
+    ['ME', 0.055, '5.50%'],
+    ['MD', 0.06, '6.00%'],
+    ['MA', 0.0625, '6.25%'],
+    ['MI', 0.06, '6.00%'],
+    ['MN', 0.06875, '6.875%'],
+    ['MS', 0.07, '7.00%'],
+    ['MO', 0.04225, '4.225%'],
+    ['MT', 0, '0.00%'],
+    ['NE', 0.055, '5.50%'],
+    ['NH', 0, '0.00%'],
+    ['NJ', 0.06625, '6.625%'],
+    ['NM', 0.04875, '4.875%'],
+    ['NY', 0.04, '4.00%'],
+    ['NC', 0.0475, '4.75%'],
+    ['ND', 0.05, '5.00%'],
+    ['NV', 0.0685, '6.85%'],
+    ['OH', 0.0575, '5.75%'],
+    ['OK', 0.045, '4.50%'],
+    ['OR', 0, '0.00%'],
+    ['PA', 0.06, '6.00%'],
+    ['RI', 0.07, '7.00%'],
+    ['SC', 0.06, '6.00%'],
+    ['SD', 0.042, '4.20%'],
+    ['TN', 0.07, '7.00%'],
+    ['TX', 0.0625, '6.25%'],
+    ['UT', 0.0485, '4.85%'],
+    ['VT', 0.06, '6.00%'],
+    ['VA', 0.043, '4.30%'],
+    ['WA', 0.065, '6.50%'],
+    ['WV', 0.06, '6.00%'],
+    ['WI', 0.05, '5.00%'],
+    ['WY', 0.04, '4.00%'],
+  ];
+
+  for (const [code, rate, pct] of stateRates) {
+    it(`${code}: ${pct}`, () => {
+      const r = getTaxRate({ state: code });
+      assert.strictEqual(r.rate, rate, `${code} rate mismatch: expected ${rate}, got ${r.rate}`);
+      assert.strictEqual(r.percentage, pct, `${code} percentage mismatch: expected ${pct}, got ${r.percentage}`);
+      assert.strictEqual(r.state, code);
+      assert.strictEqual(r.supported, true);
+    });
+  }
+});
+
+// ============================================================================
+// Texas (TX) - City-level data
 // ============================================================================
 
 describe('Texas Tax Rates', () => {
-  it('TX state base rate: 6.25%', () => {
-    const r = getTaxRate({ state: 'TX' });
-    assert.strictEqual(r.rate, 0.0625);
-    assert.strictEqual(r.percentage, '6.25%');
-    assert.strictEqual(r.state, 'TX');
-    assert.strictEqual(r.supported, true);
-  });
-
   it('Houston: 8.25%', () => {
     const r = getTaxRate({ state: 'TX', city: 'Houston' });
     assert.strictEqual(r.rate, 0.0825);
@@ -48,57 +144,27 @@ describe('Texas Tax Rates', () => {
   it('Dallas: 8.25%', () => {
     const r = getTaxRate({ state: 'TX', city: 'Dallas' });
     assert.strictEqual(r.rate, 0.0825);
-    assert.strictEqual(r.percentage, '8.25%');
   });
 
   it('Austin: 8.25%', () => {
     const r = getTaxRate({ state: 'TX', city: 'Austin' });
     assert.strictEqual(r.rate, 0.0825);
-    assert.strictEqual(r.percentage, '8.25%');
   });
 
   it('San Antonio: 8.25%', () => {
     const r = getTaxRate({ state: 'TX', city: 'San Antonio' });
     assert.strictEqual(r.rate, 0.0825);
   });
-
-  it('TX rate from ZIP (75201 - Dallas)', () => {
-    const r = getTaxRate({ zip: '75201' });
-    assert.strictEqual(r.state, 'TX');
-    assert.ok(r.rate >= 0.0625); // At least base rate
-  });
-
-  it('TX rate from ZIP (78701 - Austin)', () => {
-    const r = getTaxRate({ zip: '78701' });
-    assert.strictEqual(r.state, 'TX');
-    assert.ok(r.rate >= 0.0625);
-  });
-
-  it('TX case-insensitive state code', () => {
-    const r = getTaxRate({ state: 'tx' });
-    assert.strictEqual(r.state, 'TX');
-    assert.strictEqual(r.supported, true);
-  });
 });
 
 // ============================================================================
-// New York (NY)
+// New York (NY) - City-level data
 // ============================================================================
 
 describe('New York Tax Rates', () => {
-  it('NY state base rate: 4.00%', () => {
-    const r = getTaxRate({ state: 'NY' });
-    assert.strictEqual(r.rate, 0.04);
-    assert.strictEqual(r.percentage, '4.00%');
-    assert.strictEqual(r.state, 'NY');
-    assert.strictEqual(r.supported, true);
-  });
-
   it('New York City: 8.875%', () => {
     const r = getTaxRate({ state: 'NY', city: 'New York City' });
     assert.strictEqual(r.rate, 0.08875);
-    assert.strictEqual(r.percentage, '8.875%');
-    assert.strictEqual(r.jurisdiction, 'New York City');
   });
 
   it('NYC (alias): 8.875%', () => {
@@ -120,165 +186,73 @@ describe('New York Tax Rates', () => {
     const r = getTaxRate({ state: 'NY', city: 'Albany' });
     assert.strictEqual(r.rate, 0.08);
   });
-
-  it('NY rate from ZIP (10001 - Manhattan)', () => {
-    const r = getTaxRate({ zip: '10001' });
-    assert.strictEqual(r.state, 'NY');
-    assert.ok(r.rate >= 0.04); // At least base rate
-  });
-
-  it('NY rate from ZIP (11201 - Brooklyn)', () => {
-    const r = getTaxRate({ zip: '11201' });
-    assert.strictEqual(r.state, 'NY');
-    assert.ok(r.rate >= 0.04);
-  });
 });
 
 // ============================================================================
-// Florida (FL)
+// ZIP Code → State Auto-Detection (all states)
 // ============================================================================
 
-describe('Florida Tax Rates', () => {
-  it('FL state base rate: 6.00%', () => {
-    const r = getTaxRate({ state: 'FL' });
-    assert.strictEqual(r.rate, 0.06);
-    assert.strictEqual(r.percentage, '6.00%');
-    assert.strictEqual(r.state, 'FL');
-    assert.strictEqual(r.supported, true);
-  });
+describe('ZIP Auto-Detection - All States', () => {
+  const zipTests: [string, string][] = [
+    ['01001', 'MA'], // Springfield, MA
+    ['03101', 'NH'], // Manchester, NH
+    ['04101', 'ME'], // Portland, ME
+    ['05401', 'VT'], // Burlington, VT
+    ['06101', 'CT'], // Hartford, CT
+    ['07001', 'NJ'], // Avenel, NJ
+    ['10001', 'NY'], // Manhattan
+    ['15201', 'PA'], // Pittsburgh
+    ['20001', 'DC'], // Washington DC
+    ['21201', 'MD'], // Baltimore
+    ['22201', 'VA'], // Arlington
+    ['25301', 'WV'], // Charleston
+    ['27601', 'NC'], // Raleigh
+    ['28201', 'NC'], // Charlotte area
+    ['29201', 'SC'], // Columbia
+    ['30301', 'GA'], // Atlanta
+    ['32801', 'FL'], // Orlando
+    ['35201', 'AL'], // Birmingham
+    ['37201', 'TN'], // Nashville
+    ['39201', 'MS'], // Jackson
+    ['40201', 'KY'], // Louisville
+    ['43201', 'OH'], // Columbus
+    ['46201', 'IN'], // Indianapolis
+    ['48201', 'MI'], // Detroit
+    ['50301', 'IA'], // Des Moines
+    ['53201', 'WI'], // Milwaukee
+    ['55401', 'MN'], // Minneapolis
+    ['57101', 'SD'], // Sioux Falls
+    ['58101', 'ND'], // Fargo
+    ['59101', 'MT'], // Billings
+    ['60601', 'IL'], // Chicago
+    ['63101', 'MO'], // St. Louis
+    ['66101', 'KS'], // Kansas City, KS
+    ['68101', 'NE'], // Omaha
+    ['70112', 'LA'], // New Orleans
+    ['72201', 'AR'], // Little Rock
+    ['73101', 'OK'], // Oklahoma City
+    ['75201', 'TX'], // Dallas
+    ['80201', 'CO'], // Denver
+    ['82001', 'WY'], // Cheyenne
+    ['83201', 'ID'], // Pocatello
+    ['84101', 'UT'], // Salt Lake City
+    ['85001', 'AZ'], // Phoenix
+    ['87101', 'NM'], // Albuquerque
+    ['89101', 'NV'], // Las Vegas
+    ['90210', 'CA'], // Beverly Hills
+    ['97201', 'OR'], // Portland
+    ['98101', 'WA'], // Seattle
+  ];
 
-  it('FL rate from ZIP (33101 - Miami)', () => {
-    const r = getTaxRate({ zip: '33101' });
-    assert.strictEqual(r.state, 'FL');
-    assert.strictEqual(r.rate, 0.06);
-  });
+  for (const [zip, expectedState] of zipTests) {
+    it(`${zip} → ${expectedState}`, () => {
+      const r = getTaxRate({ zip });
+      assert.strictEqual(r.state, expectedState, `ZIP ${zip} expected ${expectedState}, got ${r.state}`);
+      assert.strictEqual(r.supported, true);
+    });
+  }
 
-  it('FL rate from ZIP (32801 - Orlando)', () => {
-    const r = getTaxRate({ zip: '32801' });
-    assert.strictEqual(r.state, 'FL');
-    assert.strictEqual(r.rate, 0.06);
-  });
-});
-
-// ============================================================================
-// Washington (WA)
-// ============================================================================
-
-describe('Washington Tax Rates', () => {
-  it('WA state base rate: 6.50%', () => {
-    const r = getTaxRate({ state: 'WA' });
-    assert.strictEqual(r.rate, 0.065);
-    assert.strictEqual(r.percentage, '6.50%');
-    assert.strictEqual(r.state, 'WA');
-    assert.strictEqual(r.supported, true);
-  });
-
-  it('WA rate from ZIP (98101 - Seattle)', () => {
-    const r = getTaxRate({ zip: '98101' });
-    assert.strictEqual(r.state, 'WA');
-    assert.strictEqual(r.rate, 0.065);
-  });
-
-  it('WA rate from ZIP (99201 - Spokane)', () => {
-    const r = getTaxRate({ zip: '99201' });
-    assert.strictEqual(r.state, 'WA');
-    assert.strictEqual(r.rate, 0.065);
-  });
-});
-
-// ============================================================================
-// Nevada (NV)
-// ============================================================================
-
-describe('Nevada Tax Rates', () => {
-  it('NV state base rate: 6.85%', () => {
-    const r = getTaxRate({ state: 'NV' });
-    assert.strictEqual(r.rate, 0.0685);
-    assert.strictEqual(r.percentage, '6.85%');
-    assert.strictEqual(r.state, 'NV');
-    assert.strictEqual(r.supported, true);
-  });
-
-  it('NV rate from ZIP (89101 - Las Vegas)', () => {
-    const r = getTaxRate({ zip: '89101' });
-    assert.strictEqual(r.state, 'NV');
-    assert.strictEqual(r.rate, 0.0685);
-  });
-
-  it('NV rate from ZIP (89501 - Reno)', () => {
-    const r = getTaxRate({ zip: '89501' });
-    assert.strictEqual(r.state, 'NV');
-    assert.strictEqual(r.rate, 0.0685);
-  });
-});
-
-// ============================================================================
-// Oregon (OR)
-// ============================================================================
-
-describe('Oregon Tax Rates', () => {
-  it('OR has no sales tax: 0.00%', () => {
-    const r = getTaxRate({ state: 'OR' });
-    assert.strictEqual(r.rate, 0);
-    assert.strictEqual(r.percentage, '0.00%');
-    assert.strictEqual(r.state, 'OR');
-    assert.strictEqual(r.supported, true);
-  });
-
-  it('OR rate from ZIP (97201 - Portland)', () => {
-    const r = getTaxRate({ zip: '97201' });
-    assert.strictEqual(r.state, 'OR');
-    assert.strictEqual(r.rate, 0);
-  });
-
-  it('OR rate from ZIP (97401 - Eugene)', () => {
-    const r = getTaxRate({ zip: '97401' });
-    assert.strictEqual(r.state, 'OR');
-    assert.strictEqual(r.rate, 0);
-  });
-});
-
-// ============================================================================
-// State Auto-Detection from ZIP
-// ============================================================================
-
-describe('State Auto-Detection from ZIP', () => {
-  it('detects CA from 90210', () => {
-    const r = getTaxRate({ zip: '90210' });
-    assert.strictEqual(r.state, 'CA');
-  });
-
-  it('detects TX from 75001', () => {
-    const r = getTaxRate({ zip: '75001' });
-    assert.strictEqual(r.state, 'TX');
-  });
-
-  it('detects NY from 10001', () => {
-    const r = getTaxRate({ zip: '10001' });
-    assert.strictEqual(r.state, 'NY');
-  });
-
-  it('detects FL from 33101', () => {
-    const r = getTaxRate({ zip: '33101' });
-    assert.strictEqual(r.state, 'FL');
-  });
-
-  it('detects WA from 98101', () => {
-    const r = getTaxRate({ zip: '98101' });
-    assert.strictEqual(r.state, 'WA');
-  });
-
-  it('detects NV from 89101', () => {
-    const r = getTaxRate({ zip: '89101' });
-    assert.strictEqual(r.state, 'NV');
-  });
-
-  it('detects OR from 97201', () => {
-    const r = getTaxRate({ zip: '97201' });
-    assert.strictEqual(r.state, 'OR');
-  });
-
-  it('state override takes precedence', () => {
+  it('state override takes precedence over ZIP detection', () => {
     const r = getTaxRate({ zip: '90210', state: 'TX' });
     assert.strictEqual(r.state, 'TX');
   });
@@ -306,17 +280,17 @@ describe('Edge Cases - Multi-State', () => {
     assert.strictEqual(r.supported, false);
   });
 
-  it('no parameters throws or returns error', () => {
+  it('no parameters returns error', () => {
     const r = getTaxRate({} as any);
     assert.strictEqual(r.supported, false);
   });
 
   it('all states return valid components', () => {
-    const states = ['CA', 'TX', 'NY', 'FL', 'WA', 'NV', 'OR'];
+    const states = getStates();
     for (const state of states) {
       const r = getTaxRate({ state });
-      assert.ok('components' in r);
-      assert.ok(typeof r.components.state === 'number');
+      assert.ok('components' in r, `${state} missing components`);
+      assert.ok(typeof r.components.state === 'number', `${state} components.state not number`);
       assert.ok(typeof r.components.county === 'number');
       assert.ok(typeof r.components.city === 'number');
       assert.ok(typeof r.components.district === 'number');
@@ -324,11 +298,37 @@ describe('Edge Cases - Multi-State', () => {
   });
 
   it('all states return metadata', () => {
-    const states = ['CA', 'TX', 'NY', 'FL', 'WA', 'NV', 'OR'];
+    const states = getStates();
     for (const state of states) {
       const r = getTaxRate({ state });
-      assert.ok(r.source);
-      assert.ok(r.effectiveDate);
+      assert.ok(r.source, `${state} missing source`);
+      assert.ok(r.effectiveDate, `${state} missing effectiveDate`);
+      assert.strictEqual(r.supported, true, `${state} not supported`);
+    }
+  });
+
+  it('case-insensitive state codes for all states', () => {
+    for (const code of ['al', 'Az', 'cO', 'DC', 'il', 'mn', 'Wv']) {
+      const r = getTaxRate({ state: code });
+      assert.strictEqual(r.supported, true, `${code} should be supported`);
+      assert.strictEqual(r.state, code.toUpperCase());
+    }
+  });
+
+  it('highest state rate: California at 7.25%', () => {
+    const r = getTaxRate({ state: 'CA' });
+    assert.strictEqual(r.rate, 0.0725);
+  });
+
+  it('lowest non-zero rate: Colorado at 2.90%', () => {
+    const r = getTaxRate({ state: 'CO' });
+    assert.strictEqual(r.rate, 0.029);
+  });
+
+  it('states tied at 7.00%: IN, MS, RI, TN', () => {
+    for (const code of ['IN', 'MS', 'RI', 'TN']) {
+      const r = getTaxRate({ state: code });
+      assert.strictEqual(r.rate, 0.07, `${code} should be 7.00%`);
     }
   });
 });

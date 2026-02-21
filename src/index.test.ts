@@ -541,10 +541,10 @@ describe('getTaxRate - Unsupported States', () => {
 // ============================================================================
 
 describe('getSupportedStates', () => {
-  it('returns array with all 7 states', () => {
+  it('returns array with all 51 entries (50 states + DC)', () => {
     const states = getSupportedStates();
     assert.strictEqual(Array.isArray(states), true);
-    assert.ok(states.length >= 7);
+    assert.strictEqual(states.length, 51);
     assert.ok(states.includes('CA'));
     assert.ok(states.includes('TX'));
     assert.ok(states.includes('NY'));
@@ -552,6 +552,7 @@ describe('getSupportedStates', () => {
     assert.ok(states.includes('WA'));
     assert.ok(states.includes('NV'));
     assert.ok(states.includes('OR'));
+    assert.ok(states.includes('DC'));
   });
 });
 
@@ -564,6 +565,7 @@ describe('getMetadata', () => {
     assert.ok(m.jurisdictionCount > 0);
     assert.ok(m.version);
     assert.ok('supportedStates' in m);
+    assert.ok('totalStates' in m);
     if ('zipCodesLoaded' in m) {
       assert.ok(m.zipCodesLoaded > 0);
     }

@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Missouri Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Missouri",
+      "type": "State",
+      "county": "State",
+      "rate": 0.04225,
+      "ratePercent": "4.225%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 8.013% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "missouri": {
+        "location": "Missouri",
+        "type": "State",
+        "county": "State",
+        "rate": 0.04225,
+        "ratePercent": "4.225%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 8.013% additional tax."
+      }
+    }
+  }
+}

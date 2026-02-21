@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Louisiana Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Louisiana",
+      "type": "State",
+      "county": "State",
+      "rate": 0.05,
+      "ratePercent": "5.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 8.5% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "louisiana": {
+        "location": "Louisiana",
+        "type": "State",
+        "county": "State",
+        "rate": 0.05,
+        "ratePercent": "5.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 8.5% additional tax."
+      }
+    }
+  }
+}

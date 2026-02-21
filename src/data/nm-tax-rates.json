@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "New Mexico Taxation and Revenue Department",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "New Mexico",
+      "type": "State",
+      "county": "State",
+      "rate": 0.04875,
+      "ratePercent": "4.875%",
+      "districtTax": 0,
+      "notes": "Gross Receipts Tax state rate. Local jurisdictions may add up to 7.75% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "new mexico": {
+        "location": "New Mexico",
+        "type": "State",
+        "county": "State",
+        "rate": 0.04875,
+        "ratePercent": "4.875%",
+        "districtTax": 0,
+        "notes": "Gross Receipts Tax state rate. Local jurisdictions may add up to 7.75% additional tax."
+      }
+    }
+  }
+}

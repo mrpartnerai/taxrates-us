@@ -51,6 +51,8 @@ export interface TaxRateResponse {
   lookupMethod?: 'city' | 'county' | 'zip' | 'state-default';
   /** County the jurisdiction is in (for city lookups) */
   county?: string;
+  /** Legal disclaimer */
+  disclaimer: string;
 }
 
 /**
@@ -67,12 +69,39 @@ export interface Jurisdiction {
 }
 
 /**
- * ZIP code to city/county mapping
+ * ZIP code to city/county mapping (legacy CA-only format)
  */
 export interface ZipEntry {
   city: string;
   county: string;
 }
+
+/**
+ * ZIP-level tax rate entry (Avalara ZIP5 data — all 50 states)
+ * Keys are compact to minimize bundle size.
+ */
+export interface ZipRateEntry {
+  /** Combined estimated rate (e.g. 0.095 = 9.5%) */
+  r: number;
+  /** Tax region name (e.g. "JACKSONVILLE") */
+  n: string;
+  /** State rate component */
+  s?: number;
+  /** County rate component */
+  co?: number;
+  /** City rate component */
+  ci?: number;
+  /** Special district rate component */
+  sp?: number;
+  /** Risk level (0 = standard; higher = more complex) */
+  risk?: number;
+}
+
+/**
+ * ZIP rate map — one per state file in src/data/zip-rates/
+ * Maps 5-digit ZIP code → ZipRateEntry
+ */
+export type ZipRateMap = Record<string, ZipRateEntry>;
 
 /**
  * Complete tax rate data structure

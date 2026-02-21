@@ -1,0 +1,89 @@
+name: Monthly Avalara ZIP Rate Refresh
+
+on:
+  schedule:
+    # Run on the 1st of every month at 8:00 AM UTC
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+    inputs:
+      states:
+        description: 'Comma-separated state codes (leave blank for all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-zip-rates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download Avalara CSV tables
+        run: |
+          mkdir -p data/avalara-csv
+          echo "⚠️  Avalara CSV download requires interactive form submission."
+          echo "    This step is a placeholder — CSVs must be manually downloaded"
+          echo "    from https://www.avalara.com/taxrates/en/download-tax-tables.html"
+          echo "    and placed in data/avalara-csv/ before running the parse step."
+          echo ""
+          echo "    To automate: use the Avalara Tax Rates API (requires API key)"
+          echo "    or set up a headless browser download flow."
+          echo ""
+          # Check if CSVs already exist (e.g. from a previous manual upload)
+          CSV_COUNT=$(find data/avalara-csv -name "*.csv" 2>/dev/null | wc -l)
+          if [ "$CSV_COUNT" -eq 0 ]; then
+            echo "::warning::No Avalara CSV files found. Please download manually and re-run."
+            exit 0
+          fi
+          echo "Found $CSV_COUNT CSV files."
+
+      - name: Parse CSVs into ZIP rate JSON
+        run: npx tsx scripts/refresh-avalara-zip-rates.ts
+
+      - name: Build and test
+        run: |
+          npm run build:package
+          node --test dist/**/*.test.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --name-only src/data/zip-rates/ > /tmp/changed_files.txt
+          if [ -s /tmp/changed_files.txt ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            cat /tmp/changed_files.txt
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No changes detected."
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: refresh Avalara ZIP-level tax rates'
+          title: '📊 Monthly Avalara ZIP rate refresh'
+          body: |
+            Automated refresh of ZIP-level tax rate data from Avalara free tax tables.
+
+            **Review checklist:**
+            - [ ] Test results pass
+            - [ ] Rate changes look reasonable (no >2% jumps)
+            - [ ] No states dropped or missing
+          branch: auto/avalara-zip-refresh
+          labels: automated,tax-data

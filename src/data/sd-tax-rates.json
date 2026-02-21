@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "South Dakota Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "South Dakota",
+      "type": "State",
+      "county": "State",
+      "rate": 0.042,
+      "ratePercent": "4.20%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add additional tax. Rate reduced from 4.5% effective 2023, set to sunset in 2027."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "south dakota": {
+        "location": "South Dakota",
+        "type": "State",
+        "county": "State",
+        "rate": 0.042,
+        "ratePercent": "4.20%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add additional tax. Rate reduced from 4.5% effective 2023, set to sunset in 2027."
+      }
+    }
+  }
+}

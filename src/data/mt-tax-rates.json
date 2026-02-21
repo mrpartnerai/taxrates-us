@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Montana Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Montana",
+      "type": "State",
+      "county": "State",
+      "rate": 0,
+      "ratePercent": "0.00%",
+      "districtTax": 0,
+      "notes": "No sales tax. Montana has no state or local general sales tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "montana": {
+        "location": "Montana",
+        "type": "State",
+        "county": "State",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": "No sales tax. Montana has no state or local general sales tax."
+      }
+    }
+  }
+}

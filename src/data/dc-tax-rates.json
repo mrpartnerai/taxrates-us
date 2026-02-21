@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "DC Office of Tax and Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "District of Columbia",
+      "type": "State",
+      "county": "State",
+      "rate": 0.06,
+      "ratePercent": "6.00%",
+      "districtTax": 0,
+      "notes": "Standard sales tax rate. No additional local rates."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "district of columbia": {
+        "location": "District of Columbia",
+        "type": "State",
+        "county": "State",
+        "rate": 0.06,
+        "ratePercent": "6.00%",
+        "districtTax": 0,
+        "notes": "Standard sales tax rate. No additional local rates."
+      }
+    }
+  }
+}

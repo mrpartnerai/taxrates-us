@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Maine Revenue Services",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Maine",
+      "type": "State",
+      "county": "State",
+      "rate": 0.055,
+      "ratePercent": "5.50%",
+      "districtTax": 0,
+      "notes": "State rate. No additional local sales taxes."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "maine": {
+        "location": "Maine",
+        "type": "State",
+        "county": "State",
+        "rate": 0.055,
+        "ratePercent": "5.50%",
+        "districtTax": 0,
+        "notes": "State rate. No additional local sales taxes."
+      }
+    }
+  }
+}

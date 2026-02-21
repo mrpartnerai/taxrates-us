@@ -134,6 +134,66 @@ function main() {
     }
   }
 
+  // Write audit log for every validation run
+  const auditLog = {
+    timestamp: new Date().toISOString(),
+    files: stagedFiles,
+    errors: totalErrors,
+    warnings: totalWarnings,
+    jurisdictionsAffected: totalJurisdictionsAffected,
+    totalJurisdictions,
+    passed: totalErrors === 0,
+    exitCode: totalErrors > 0 ? EXIT_VALIDATION_FAILED : (totalWarnings > 10 ? EXIT_NEEDS_MANUAL_REVIEW : EXIT_SUCCESS),
+  };
+
+  try {
+    // Append to audit history
+    const auditPath = path.join(STAGED_DIR, 'validation-audit.json');
+    let history: any[] = [];
+    if (fs.existsSync(auditPath)) {
+      try { history = JSON.parse(fs.readFileSync(auditPath, 'utf-8')); } catch {}
+    }
+    history.push(auditLog);
+    // Keep last 100 entries
+    if (history.length > 100) history = history.slice(-100);
+    fs.writeFileSync(auditPath, JSON.stringify(history, null, 2));
+    console.log(`\n📝 Audit log written to ${auditPath}`);
+  } catch (err: any) {
+    console.warn(`⚠️  Could not write audit log: ${err.message}`);
+  }
+
+  // Send alert webhook for failures or high-risk changes
+  if (totalErrors > 0 || totalWarnings > 10) {
+    const webhookUrl = process.env.VALIDATION_ALERT_WEBHOOK;
+    if (webhookUrl) {
+      try {
+        const alertPayload = {
+          text: `⚠️ taxrates-us auto-update validation: ${totalErrors} errors, ${totalWarnings} warnings`,
+          timestamp: auditLog.timestamp,
+          files: stagedFiles,
+          errors: totalErrors,
+          warnings: totalWarnings,
+          passed: totalErrors === 0,
+        };
+        // Fire-and-forget alert
+        const https = require('https');
+        const http = require('http');
+        const url = new URL(webhookUrl);
+        const client = url.protocol === 'https:' ? https : http;
+        const body = JSON.stringify(alertPayload);
+        const req = client.request(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
+        });
+        req.write(body);
+        req.end();
+        console.log('🔔 Alert webhook sent');
+      } catch (alertErr: any) {
+        console.warn(`⚠️  Alert webhook failed: ${alertErr.message}`);
+      }
+    }
+  }
+
   if (totalErrors > 0) {
     console.log('\n❌ Validation failed - staged data has errors.');
     console.log('   Do NOT commit this data to the repository.');

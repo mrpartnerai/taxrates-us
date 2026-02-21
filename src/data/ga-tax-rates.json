@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Georgia Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Georgia",
+      "type": "State",
+      "county": "State",
+      "rate": 0.04,
+      "ratePercent": "4.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions add 1% to 5% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "georgia": {
+        "location": "Georgia",
+        "type": "State",
+        "county": "State",
+        "rate": 0.04,
+        "ratePercent": "4.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions add 1% to 5% additional tax."
+      }
+    }
+  }
+}

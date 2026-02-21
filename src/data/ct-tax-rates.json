@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Connecticut Department of Revenue Services",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Connecticut",
+      "type": "State",
+      "county": "State",
+      "rate": 0.0635,
+      "ratePercent": "6.35%",
+      "districtTax": 0,
+      "notes": "State rate. Reduced rates apply to certain items. Limited local tax authority."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "connecticut": {
+        "location": "Connecticut",
+        "type": "State",
+        "county": "State",
+        "rate": 0.0635,
+        "ratePercent": "6.35%",
+        "districtTax": 0,
+        "notes": "State rate. Reduced rates apply to certain items. Limited local tax authority."
+      }
+    }
+  }
+}

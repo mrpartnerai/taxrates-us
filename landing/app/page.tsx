@@ -29,6 +29,18 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Disclaimer Banner */}
+      <div className="bg-yellow-600/10 border-y border-yellow-600/30">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-start gap-3">
+            <span className="text-yellow-400 text-xl flex-shrink-0">⚠️</span>
+            <div className="text-sm text-yellow-200">
+              <strong className="font-semibold">Informational purposes only — not tax advice.</strong> Tax rates may change. Always verify rates with official state/local tax authorities before making tax decisions. Use at your own risk. See <Link href="https://github.com/mrpartnerai/taxrates-us/blob/main/TERMS.md" className="underline hover:text-yellow-100">Terms of Use</Link>.
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
         <div className="inline-block px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm font-medium mb-6">
@@ -401,14 +413,36 @@ curl "https://taxrates-us.vercel.app\\
               <Link href="https://www.npmjs.com/package/taxrates-us" className="text-gray-400 hover:text-white transition">
                 npm
               </Link>
+              <Link href="https://github.com/mrpartnerai/taxrates-us/blob/main/TERMS.md" className="text-gray-400 hover:text-white transition">
+                Terms
+              </Link>
               <Link href="https://github.com/mrpartnerai/taxrates-us/issues" className="text-gray-400 hover:text-white transition">
                 Issues
               </Link>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
-            <p>MIT License • Created by <Link href="https://github.com/mrpartnerai" className="text-blue-400 hover:underline">mrpartner</Link></p>
-            <p className="mt-2 text-xs">For informational purposes only. Not tax advice. Verify rates for production use.</p>
+          <div className="mt-6 pt-6 border-t border-gray-800">
+            <div className="bg-gray-800/50 rounded-lg p-4 mb-4">
+              <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                <span className="text-yellow-400">⚠️</span>
+                Important Disclaimer
+              </h4>
+              <p className="text-sm text-gray-400 mb-2">
+                <strong className="text-gray-300">This tool provides tax rate information for informational purposes only. It is NOT tax advice.</strong>
+              </p>
+              <ul className="text-xs text-gray-500 space-y-1 ml-4">
+                <li>• Tax rates may change — always verify with official state/local tax authorities</li>
+                <li>• Edge cases exist — special districts, exemptions, and local variations may not be reflected</li>
+                <li>• Not for legal compliance — consult a tax professional for production use cases</li>
+                <li>• Use at your own risk — authors are not liable for incorrect calculations or compliance issues</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-3">
+                For official rates, consult your state&apos;s Department of Revenue. See <Link href="https://github.com/mrpartnerai/taxrates-us/blob/main/TERMS.md" className="text-blue-400 hover:underline">Terms of Use</Link> for details.
+              </p>
+            </div>
+            <div className="text-center text-sm text-gray-500">
+              <p>MIT License • Created by <Link href="https://github.com/mrpartnerai" className="text-blue-400 hover:underline">mrpartner</Link></p>
+            </div>
           </div>
         </div>
       </footer>

@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Kansas Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Kansas",
+      "type": "State",
+      "county": "State",
+      "rate": 0.065,
+      "ratePercent": "6.50%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions may add up to 5.625% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "kansas": {
+        "location": "Kansas",
+        "type": "State",
+        "county": "State",
+        "rate": 0.065,
+        "ratePercent": "6.50%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions may add up to 5.625% additional tax."
+      }
+    }
+  }
+}

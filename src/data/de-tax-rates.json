@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Delaware Division of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Delaware",
+      "type": "State",
+      "county": "State",
+      "rate": 0,
+      "ratePercent": "0.00%",
+      "districtTax": 0,
+      "notes": "No sales tax. Delaware imposes a gross receipts tax on businesses instead."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "delaware": {
+        "location": "Delaware",
+        "type": "State",
+        "county": "State",
+        "rate": 0,
+        "ratePercent": "0.00%",
+        "districtTax": 0,
+        "notes": "No sales tax. Delaware imposes a gross receipts tax on businesses instead."
+      }
+    }
+  }
+}

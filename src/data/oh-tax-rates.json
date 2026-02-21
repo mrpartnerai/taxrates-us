@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Ohio Department of Taxation",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Ohio",
+      "type": "State",
+      "county": "State",
+      "rate": 0.0575,
+      "ratePercent": "5.75%",
+      "districtTax": 0,
+      "notes": "State base rate. County sales taxes add 0% to 2.5% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "ohio": {
+        "location": "Ohio",
+        "type": "State",
+        "county": "State",
+        "rate": 0.0575,
+        "ratePercent": "5.75%",
+        "districtTax": 0,
+        "notes": "State base rate. County sales taxes add 0% to 2.5% additional tax."
+      }
+    }
+  }
+}

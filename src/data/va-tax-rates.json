@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Virginia Department of Taxation",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Virginia",
+      "type": "State",
+      "county": "State",
+      "rate": 0.043,
+      "ratePercent": "4.30%",
+      "districtTax": 0,
+      "notes": "State base rate (4.3% state general + local minimum). Local jurisdictions add 1% to 2.7% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "virginia": {
+        "location": "Virginia",
+        "type": "State",
+        "county": "State",
+        "rate": 0.043,
+        "ratePercent": "4.30%",
+        "districtTax": 0,
+        "notes": "State base rate (4.3% state general + local minimum). Local jurisdictions add 1% to 2.7% additional tax."
+      }
+    }
+  }
+}

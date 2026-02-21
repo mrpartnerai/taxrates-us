@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Hawaii Department of Taxation",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Hawaii",
+      "type": "State",
+      "county": "State",
+      "rate": 0.04,
+      "ratePercent": "4.00%",
+      "districtTax": 0,
+      "notes": "General Excise Tax (GET) rate. County surcharges may add up to 0.5%."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "hawaii": {
+        "location": "Hawaii",
+        "type": "State",
+        "county": "State",
+        "rate": 0.04,
+        "ratePercent": "4.00%",
+        "districtTax": 0,
+        "notes": "General Excise Tax (GET) rate. County surcharges may add up to 0.5%."
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "North Carolina Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "North Carolina",
+      "type": "State",
+      "county": "State",
+      "rate": 0.0475,
+      "ratePercent": "4.75%",
+      "districtTax": 0,
+      "notes": "State base rate. Local jurisdictions add 2% to 4.25% additional tax."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "north carolina": {
+        "location": "North Carolina",
+        "type": "State",
+        "county": "State",
+        "rate": 0.0475,
+        "ratePercent": "4.75%",
+        "districtTax": 0,
+        "notes": "State base rate. Local jurisdictions add 2% to 4.25% additional tax."
+      }
+    }
+  }
+}

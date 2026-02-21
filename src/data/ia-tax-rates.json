@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "effectiveDate": "2026-01-01",
+    "source": "Iowa Department of Revenue",
+    "lastUpdated": "2026-02-10",
+    "jurisdictionCount": 1,
+    "version": "0.4.0"
+  },
+  "jurisdictions": [
+    {
+      "location": "Iowa",
+      "type": "State",
+      "county": "State",
+      "rate": 0.06,
+      "ratePercent": "6.00%",
+      "districtTax": 0,
+      "notes": "State base rate. Local option sales tax of up to 2% may apply."
+    }
+  ],
+  "lookup": {
+    "byCity": {},
+    "byCounty": {},
+    "byState": {
+      "iowa": {
+        "location": "Iowa",
+        "type": "State",
+        "county": "State",
+        "rate": 0.06,
+        "ratePercent": "6.00%",
+        "districtTax": 0,
+        "notes": "State base rate. Local option sales tax of up to 2% may apply."
+      }
+    }
+  }
+}
